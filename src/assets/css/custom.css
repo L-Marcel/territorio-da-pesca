@@ -23,6 +23,13 @@
     --testimonial-item-quote-color: #fceaea;
     --contact-info-color: #f8d4d5;
     --contant-send-mensage: #18d26e;
+    --crayola-amarela: #ffeb99;
+    --vermelho-amarelo-max: #ffcd70; 
+    --po-azul: #bfeeed;
+    --verde-azul-medio: #98d7d0;
+    --verdete: #5ec2b7;
+    --teal-de-aco: #4d8688;
+    
 }
 
 ::-webkit-scrollbar {
@@ -46,5 +53,9 @@ background: var(--main-color);
 }
 
 .alt-bg-color {
-    background-color: var(--main-color-alt) !important;
+    background-color: var(--crayola-amarela) !important;
+}
+.alt-bg-color:hover {
+    background-color: var(--main-color) !important;
+    
 }
