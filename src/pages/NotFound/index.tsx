@@ -16,6 +16,8 @@ const NotFound = () => {
     const path = useLocation().pathname;
     const lang = getRouteParamOfPath(path, 0);
 
+    console.log(content)
+
     return(
         <>  
             <Header language={lang} onChangeLanguage={(json) => { setContent(json) }}/>

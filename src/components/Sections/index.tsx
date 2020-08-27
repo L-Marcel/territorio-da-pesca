@@ -1,5 +1,6 @@
 import React from 'react';
 import { SimpleContentPage } from '../../json/language/interface';
+import { Link } from 'react-router-dom';
 
 interface SectionsProps {
     content: SimpleContentPage;
@@ -40,8 +41,8 @@ const Sections: React.FC<SectionsProps> = ({ content }) => {
                                                 <h4>{item.title}</h4>
                                                 <p>{item.filter}</p>
                                                 <div className="portfolio-links">
-                                                    <a href={item.src} data-gall="portfolioGallery" className="venobox vbox-item"><i className="bx bx-plus"></i></a>
-                                                    <a href="#" title="More Details"><i className="bx bx-link"></i></a>
+                                                    <Link to={item.src} data-gall="portfolioGallery" className="venobox vbox-item"><i className="bx bx-plus"></i></Link>
+                                                    <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
                                                 </div>
                                             </div>
                                             </div>

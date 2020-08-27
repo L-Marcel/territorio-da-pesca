@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ language, onChangeLanguage }) => {
         setLang(value);
 
         onChangeLanguage(value.json);
-    }, [language]);
+    }, [language, onChangeLanguage]);
 
     return(
         <header id="header" className="fixed-top">
@@ -120,7 +120,7 @@ const Header: React.FC<HeaderProps> = ({ language, onChangeLanguage }) => {
                     </li>
                 </ul>
             </nav>
-                <Link to="#about" className="get-started-btn scrollto">{lang.json.headerMapButtonName}</Link>
+                <Link to={lang.json.headerButton.route} className="get-started-btn scrollto">{lang.json.headerButton.name}</Link>
             </div>
         </header>
     );

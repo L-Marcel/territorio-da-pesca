@@ -243,7 +243,8 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--main-color); /*Muda a cor do botão mapa*/
   color: var(--white-color);
   border-radius: 4px;
-  padding: 8px 25px;
+  border: 2px solid var(--main-color);
+  padding: 7px 24px;
   white-space: nowrap;
   transition: 0.3s;
   font-size: 14px;
@@ -417,8 +418,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
   margin-top: 10px;
   color: var(--black-color);
-  background: var(--crayola-amarela); /*mudar em custom*/
-  opacity: 0.7;
+  background-color: var(--crayola-amarela); /*mudar em custom*/
   border: 2px solid var(--vermelho-amarelo-max);
 }
 

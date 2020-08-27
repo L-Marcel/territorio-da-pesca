@@ -3,7 +3,10 @@ export default interface LangFileProps {
         name: string,
         route: string
     }[],
-    headerMapButtonName: string,
+    headerButton: {
+        name: string;
+        route: string;
+    },
     home: {
         title: string,
         subtitle: string,

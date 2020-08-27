@@ -19,7 +19,10 @@ const enLang: LangFileProps = {
             route: "/en/routes"
         }
     ],
-    headerMapButtonName: "Map",
+    headerButton: {
+        name: "Map",
+        route: "/en/map"
+    },
     home: {
         title: "WELLCOME",
         subtitle: "AO TERRITÓRIO DA PESCA",

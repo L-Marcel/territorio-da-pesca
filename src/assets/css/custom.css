@@ -24,12 +24,12 @@
     --contact-info-color: #f8d4d5;
     --contant-send-mensage: #18d26e;
     --crayola-amarela: #ffeb99;
+    --crayola-opacity-amarela: #ffeb99ea;
     --vermelho-amarelo-max: #ffcd70; 
     --po-azul: #bfeeed;
     --verde-azul-medio: #98d7d0;
     --verdete: #5ec2b7;
     --teal-de-aco: #4d8688;
-    
 }
 
 ::-webkit-scrollbar {
@@ -55,7 +55,28 @@ background: var(--main-color);
 .alt-bg-color {
     background-color: var(--crayola-amarela) !important;
 }
+
+
 .alt-bg-color:hover {
     background-color: var(--main-color) !important;
-    
+}
+
+.button-home {
+    background-color: var(--crayola-opacity-amarela) !important;
+}
+
+.button-home:hover {
+    background-color: transparent !important;
+    border-color: var(--crayola-opacity-amarela) !important;
+    color: var(--crayola-opacity-amarela) !important;
+}
+
+#header .get-started-btn:hover {
+    background-color: transparent !important;
+    border-color: var(--main-color) !important;
+    color: var(--main-color) !important;
+}
+
+.header-scrolled .get-started-btn:hover {
+    color: var(--black-color);
 }

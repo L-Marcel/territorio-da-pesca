@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 import Home from '../pages/Home';
+import PointsMap from '../pages/PointsMap';
 import NotFound from '../pages/NotFound';
 
 const Router = () => {
@@ -10,6 +11,7 @@ const Router = () => {
             <span id="page-top"/>
             <Switch>
                 <Route path="/:lan/home" exact component={Home}/>
+                <Route path="/:lan/map" exact component={PointsMap}/>
                 <Route path="/*" component={NotFound}/>
             </Switch>
  

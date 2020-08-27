@@ -29,7 +29,7 @@ const Home = () => {
                             <h2 className="margin-bottom">{content.home.subtitle}</h2>
                             { content.home.button.map(function(item, index){
                                 return(
-                                    <Link key={index} to={item.route} className="btn-get-started alt-bg-color scrollto">{item.text}</Link>
+                                    <Link key={index} to={item.route} className="btn-get-started alt-bg-color button-home scrollto">{item.text}</Link>
                                 );
                             }) }
                         </div>

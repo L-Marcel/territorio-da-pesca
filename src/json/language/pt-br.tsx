@@ -21,7 +21,10 @@ const ptBrLang: LangFileProps = {
             route: "/pt-br/routes"
         }
     ],
-    headerMapButtonName: "Mapa",
+    headerButton: {
+        name: "Mapa",
+        route: "/pt-br/map"
+    },
     home: {
         title: "BEM-VINDO",
         subtitle: "AO TERRITÓRIO DA PESCA",
