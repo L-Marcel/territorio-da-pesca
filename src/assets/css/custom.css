@@ -126,3 +126,16 @@ background: var(--main-color);
 .header-scrolled .get-started-btn:hover {
     color: var(--black-color);
 }
+
+.logo-header {
+    max-width: 10%;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.nav-menu-container {
+    display: flex;
+    flex-direction: row;
+}

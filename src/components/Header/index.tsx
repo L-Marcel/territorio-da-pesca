@@ -7,6 +7,8 @@ import getLanguageFile, { langOptions } from '../../util/getLanguageFile';
 
 import ptBrLang from '../../json/language/pt-br';
 
+import logoImg from '../../assets/img/logo.png';
+
 export interface LangProps {
     type: "Lang",
     name: string,
@@ -47,80 +49,82 @@ const Header: React.FC<HeaderProps> = ({ language, onChangeLanguage }) => {
 
     return(
         <header id="header" className="fixed-top">
-            <div className="container d-flex align-items-center">
-            <h1 className="logo mr-auto"><Link to="index.html">Presento<span>.</span></Link></h1>
-            <nav className="nav-menu d-none d-lg-block">
-                <ul>
-                    { lang.json.header.map(function(item, index){
-                        return(
-                            <li key={index} className={item.route === history.location.pathname? "active":""}>
-                                <Link to={item.route}>
-                                    {item.name}
-                                </Link>
-                            </li>
-                        );
-                    }) }
-                    <li className="drop-down"><Link to={history.location.pathname}>{lang.endName? lang.endName:lang.name}</Link>
+            <div className="container d-flex align-items-center justify-space-between">
+                <img src={logoImg } className="logo-header"></img>
+                <div className="nav-menu-container">
+                    <nav className="nav-menu d-none d-lg-block">
                         <ul>
-                            { langOptions.map(function(item, index){
-                                if(item.type === "Lang"){
-                                    const value = getLanguageFile(item.param);
-
-                                    let newRoute = `/${value.param}`;
-                                    for(let x = 2; x < path.length; x++){
-                                        newRoute = newRoute + "/" + path[x] 
-                                    }
-
-                                    return(
-                                        <li key={index}>
-                                            <Link 
-                                                to={newRoute} 
-                                                onClick={() => { setLang(value) }}
-                                            >
-                                                {item.name}
-                                            </Link>
-                                        </li>
-                                    );
-                                }else{
-                                    const value = getLanguageFile(item.options[0].param);
-
-                                    let newRoute = `/${value.param}`;
-                                    for(let x = 2; x < path.length; x++){
-                                        newRoute = newRoute + "/" + path[x] 
-                                    }
-                                    
-                                    return(
-                                        <li key={index} className="drop-down"><Link to={newRoute}>{item.name}</Link>
-                                            <ul>
-                                                { item.options.map(function(item, index){
-                                                    const value = getLanguageFile(item.param);
-
-                                                    let newRoute = `/${value.param}`;
-                                                    for(let x = 2; x < path.length; x++){
-                                                        newRoute = newRoute + "/" + path[x] 
-                                                    }
-
-                                                    return(
-                                                        <li key={index}>
-                                                            <Link 
-                                                                to={newRoute}
-                                                                onClick={() => { setLang(value) }}
-                                                            >
-                                                                {item.name}
-                                                            </Link>
-                                                        </li>
-                                                    );
-                                                }) }
-                                            </ul>
-                                        </li>
-                                    );
-                                }
+                            { lang.json.header.map(function(item, index){
+                                return(
+                                    <li key={index} className={item.route === history.location.pathname? "active":""}>
+                                        <Link to={item.route}>
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                );
                             }) }
+                            <li className="drop-down"><Link to={history.location.pathname}>{lang.endName? lang.endName:lang.name}</Link>
+                                <ul>
+                                    { langOptions.map(function(item, index){
+                                        if(item.type === "Lang"){
+                                            const value = getLanguageFile(item.param);
+
+                                            let newRoute = `/${value.param}`;
+                                            for(let x = 2; x < path.length; x++){
+                                                newRoute = newRoute + "/" + path[x] 
+                                            }
+
+                                            return(
+                                                <li key={index}>
+                                                    <Link 
+                                                        to={newRoute} 
+                                                        onClick={() => { setLang(value) }}
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                </li>
+                                            );
+                                        }else{
+                                            const value = getLanguageFile(item.options[0].param);
+
+                                            let newRoute = `/${value.param}`;
+                                            for(let x = 2; x < path.length; x++){
+                                                newRoute = newRoute + "/" + path[x] 
+                                            }
+                                            
+                                            return(
+                                                <li key={index} className="drop-down"><Link to={newRoute}>{item.name}</Link>
+                                                    <ul>
+                                                        { item.options.map(function(item, index){
+                                                            const value = getLanguageFile(item.param);
+
+                                                            let newRoute = `/${value.param}`;
+                                                            for(let x = 2; x < path.length; x++){
+                                                                newRoute = newRoute + "/" + path[x] 
+                                                            }
+
+                                                            return(
+                                                                <li key={index}>
+                                                                    <Link 
+                                                                        to={newRoute}
+                                                                        onClick={() => { setLang(value) }}
+                                                                    >
+                                                                        {item.name}
+                                                                    </Link>
+                                                                </li>
+                                                            );
+                                                        }) }
+                                                    </ul>
+                                                </li>
+                                            );
+                                        }
+                                    }) }
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                </ul>
-            </nav>
-                <Link to={lang.json.headerButton.route} className="get-started-btn scrollto">{lang.json.headerButton.name}</Link>
+                    </nav>
+                    <Link to={lang.json.headerButton.route} className="get-started-btn scrollto">{lang.json.headerButton.name}</Link>
+                </div>
             </div>
         </header>
     );

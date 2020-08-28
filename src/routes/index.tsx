@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import PointsMap from '../pages/PointsMap';
@@ -12,7 +12,11 @@ const Router = () => {
             <Switch>
                 <Route path="/:lan/home" exact component={Home}/>
                 <Route path="/:lan/map" exact component={PointsMap}/>
-                <Route path="/*" component={NotFound}/>
+
+                <Redirect path="/" exact to="/pt-br/home"/>
+                <Redirect path="/:lan" exact to="/:lan/home"/>
+                <Route path="/:lan/*" component={NotFound}/>
+                
             </Switch>
  
             <Link to="#page-top" className="back-to-top"><i className="icofont-simple-up"></i></Link>
