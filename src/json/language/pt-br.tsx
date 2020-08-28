@@ -84,6 +84,11 @@ const ptBrLang: LangFileProps = {
                 ]
             },
         ]
+    },
+    notFound: {
+        title: "ERRO 404",
+        subtitle: "Desculpa, não encontramos a página que você está procurando.",
+
     }
 }
 

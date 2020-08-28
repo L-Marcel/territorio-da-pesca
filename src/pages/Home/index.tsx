@@ -37,7 +37,7 @@ const Home = () => {
                     </div>
 
                 </section>
-                <Sections content={content.home.content}/>
+                <Sections content={content.home.content} withMarginTop={false}/>
                 <Footer/>
             </div>
         </>

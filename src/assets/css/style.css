@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   background: var(--crayola-amarela);
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 1005;
   padding: 20px 0;
 }
 

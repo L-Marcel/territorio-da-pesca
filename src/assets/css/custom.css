@@ -48,6 +48,52 @@ background: var(--secondary-color);
 background: var(--main-color);
 }
 
+.first-item-of-page {
+    margin-top: 82px;
+}
+
+@media (max-width: 992px) {
+    .first-item-of-page {
+        margin-top: 57px;
+    }
+}
+
+.leaflet-map-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.leaflet-map {
+    width: 80%;
+    height: 80vh;
+}
+
+.leaflet-map-menu {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 20%;
+}
+
+@media (max-width: 992px) {
+    .leaflet-map {
+        width: 100%;
+        height: 40vh;
+    }
+    
+    .leaflet-map-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .leaflet-map-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 10vh;
+    }
+}
+
 .margin-bottom {
     margin-bottom: 30px !important;
 }

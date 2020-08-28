@@ -46,6 +46,11 @@ const enLang: LangFileProps = {
                 " de trabalho.",
             }
         ]
+    },
+    notFound: {
+        title: "PÁGINA NÃO EXISTE - ERRO 404",
+        subtitle: "Desculpa, não encontramos a página que você está procurando.",
+
     }
 }
 

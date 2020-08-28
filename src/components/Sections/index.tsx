@@ -4,11 +4,20 @@ import { Link } from 'react-router-dom';
 
 interface SectionsProps {
     content: SimpleContentPage;
+    withMarginTop?: boolean;
 }
 
-const Sections: React.FC<SectionsProps> = ({ content }) => {
+const Sections: React.FC<SectionsProps> = ({ content, withMarginTop }) => {
     const Page = content.map(function(item, index){
-        const bgColor = (index % 2 === 0)? "":"section-bg";
+
+        let haveMarginTop = false;
+
+        if(withMarginTop === undefined && index === 0){
+            haveMarginTop = true;
+        }
+
+        const marginTop = (!haveMarginTop)? "":"first-item-of-page ";
+        const bgColor = (index % 2 === 0)? marginTop:(marginTop + "section-bg");
         switch(item?.type){
             case("Text"):
                 return(

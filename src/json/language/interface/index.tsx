@@ -15,6 +15,10 @@ export default interface LangFileProps {
             route: string
         }[],
         content: SimpleContentPage,
+    },
+    notFound: {
+        title: string,
+        subtitle: string,
     }
 };
 

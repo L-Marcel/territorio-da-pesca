@@ -21,24 +21,26 @@ const PointsMap = () => {
 
     const position = [51.505, -0.09, 13];
 
+    //O espaço em branco do lado do mapa pode ser usado depois
+
     return(
-
-
         <>  
-        <Header language={lang} onChangeLanguage={(json) => {setContent(json)}}/>
-        <div id="page">
-            <section id="hero" className="d-flex align-items-center">
-            <Map center={[position[0], position[1]]} zoom={position[2]}>
-                <TileLayer
-                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-            </Map>
-            </section>
-            <Sections content={content.home.content}/>
-            <Footer/>
-        </div>
-    </>
+            <Header language={lang} onChangeLanguage={(json) => {setContent(json)}}/>
+            <div id="page">
+                <Sections content={[{ type: "Text", title: "PRIMEIRO NOS DIGA O QUE PROCURA", subtitle: "Colocamos os filtros aqui depois" }]}/>
+                <div className="leaflet-map-container">
+                    <Map center={[position[0], position[1]]} zoom={position[2]} className="leaflet-map">
+                        <TileLayer
+                            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                    </Map>
+                    <div className="leaflet-map-menu">
+                    </div>
+                </div>
+                <Footer/>
+            </div>
+        </>
     );
 }
 
