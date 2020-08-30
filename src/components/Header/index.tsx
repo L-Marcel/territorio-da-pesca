@@ -7,7 +7,7 @@ import getLanguageFile, { langOptions } from '../../util/getLanguageFile';
 
 import ptBrLang from '../../json/language/pt-br';
 
-import logoImg from '../../assets/img/logo.png';
+import nomeImg from '../../assets/img/nome.png';
 
 export interface LangProps {
     type: "Lang",
@@ -50,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({ language, onChangeLanguage }) => {
     return(
         <header id="header" className="fixed-top">
             <div className="container d-flex align-items-center justify-space-between">
-                <img src={logoImg } className="logo-header"></img>
+                <img src={nomeImg } className="logo-header"></img>
                 <div className="nav-menu-container">
                     <nav className="nav-menu d-none d-lg-block">
                         <ul>

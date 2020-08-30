@@ -61,10 +61,12 @@ background: var(--main-color);
 .leaflet-map-container {
     display: flex;
     flex-direction: row;
+    padding-right: 100px !important;
+    padding-left: 100px !important;
 }
 
 .leaflet-map {
-    width: 80%;
+    width: 100%;
     height: 80vh;
 }
 
@@ -72,18 +74,21 @@ background: var(--main-color);
     display: flex;
     flex-direction: column;
     height: 80vh;
-    width: 20%;
+    width: 0%;
 }
 
 @media (max-width: 992px) {
     .leaflet-map {
         width: 100%;
-        height: 40vh;
+        height: 80vh;
+        
     }
     
     .leaflet-map-container {
         display: flex;
         flex-direction: column;
+      
+      
     }
     
     .leaflet-map-menu {
@@ -128,7 +133,7 @@ background: var(--main-color);
 }
 
 .logo-header {
-    max-width: 10%;
+    max-width: 20%;
 }
 
 .justify-space-between {
