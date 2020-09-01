@@ -144,3 +144,7 @@ background: var(--main-color);
     display: flex;
     flex-direction: row;
 }
+.leaflet-div-icon {
+    background: transparent;
+    border: none;
+}  

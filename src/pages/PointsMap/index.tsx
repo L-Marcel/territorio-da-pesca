@@ -12,8 +12,8 @@ import getRouteParamOfPath from '../../util/getRouteParamOfPath';
 import LangFileProps from '../../json/language/interface';
 import Sections from '../../components/Sections';
 
-import { FaBeer } from 'react-icons/fa';
-import L from 'leaflet';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { divIcon } from 'leaflet';
 
 
 const PointsMap = () => {
@@ -21,11 +21,14 @@ const PointsMap = () => {
     const path = useLocation().pathname;
     const lang = getRouteParamOfPath(path, 0);
     const position = [-5.11127, -36.6261, 15];
-    const icon = L.icon({
-        iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-        iconUrl: require('leaflet/dist/images/marker-icon.png'),
-        shadowUrl: require('leaflet/dist/images/marker-shadow.png')
-   })
+    const iconMarkup = renderToStaticMarkup(
+        <i className=" fa fa-map-marker-alt fa-3x" />
+      );
+      const customMarkerIcon = divIcon({
+        html: iconMarkup
+      });
+  
+     
 
     //O espaço em branco do lado do mapa pode ser usado depois
 
@@ -41,7 +44,7 @@ const PointsMap = () => {
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         
-                        <Marker position={[-5.110568, -36.626979]} icon={icon} >
+                        <Marker position={[-5.110568, -36.626979]} icon={customMarkerIcon} >
                             <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
                         </Marker>
                     </Map>
