@@ -5,32 +5,19 @@ import { Map, TileLayer, Popup, Marker  } from 'react-leaflet';
 import Footer from '../../components/Footer';
 
 import Header from '../../components/Header';
-import ptBrLang from '../../json/language/pt-br';
+import ptBrLang from '../../config/language/pt-br';
 
 import getRouteParamOfPath from '../../util/getRouteParamOfPath';
 
-import LangFileProps from '../../json/language/interface';
+import LangFileProps from '../../config/language/interface';
 import Sections from '../../components/Sections';
-
-import { renderToStaticMarkup } from 'react-dom/server';
-import { divIcon } from 'leaflet';
-
+import getLeafletIcon from '../../config/icons';
 
 const PointsMap = () => {
     const [content, setContent] = useState<LangFileProps>(ptBrLang);
     const path = useLocation().pathname;
     const lang = getRouteParamOfPath(path, 0);
     const position = [-5.11127, -36.6261, 15];
-    const iconMarkup = renderToStaticMarkup(
-        <i className=" fa fa-map-marker-alt fa-3x" />
-      );
-      const customMarkerIcon = divIcon({
-        html: iconMarkup
-      });
-  
-     
-
-    //O espaço em branco do lado do mapa pode ser usado depois
 
     return(
         <> 
@@ -44,7 +31,10 @@ const PointsMap = () => {
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         
-                        <Marker position={[-5.110568, -36.626979]} icon={customMarkerIcon} >
+                        <Marker position={[-5.110568, -36.626979]} icon={getLeafletIcon("home", "blue")}>
+                            <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+                        </Marker>
+                        <Marker position={[-5.110568, -36.625959]} icon={getLeafletIcon("coffee", "red")}>
                             <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
                         </Marker>
                     </Map>

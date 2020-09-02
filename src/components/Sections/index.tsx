@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimpleContentPage } from '../../json/language/interface';
+import { SimpleContentPage } from '../../config/language/interface';
 import { Link } from 'react-router-dom';
 
 interface SectionsProps {

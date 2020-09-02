@@ -4,11 +4,11 @@ import { useLocation, Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
-import ptBrLang from '../../json/language/pt-br';
+import ptBrLang from '../../config/language/pt-br';
 
 import getRouteParamOfPath from '../../util/getRouteParamOfPath';
 
-import LangFileProps from '../../json/language/interface';
+import LangFileProps from '../../config/language/interface';
 
 const NotFound = () => {
     const [content, setContent] = useState<LangFileProps>(ptBrLang);

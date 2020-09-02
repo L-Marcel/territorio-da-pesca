@@ -1,7 +1,7 @@
 import { LangProps, LangGroupProps } from '../components/Header/index';
 
-import ptBrLang from '../json/language/pt-br';
-import enLang from '../json/language/en';
+import ptBrLang from '../config/language/pt-br';
+import enLang from '../config/language/en';
 
 export const langOptions: (LangProps | LangGroupProps)[] = [
     {   

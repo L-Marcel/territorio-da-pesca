@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import LangFileProps from '../../json/language/interface';
+import LangFileProps from '../../config/language/interface';
 
 import getLanguageFile, { langOptions } from '../../util/getLanguageFile';
 
-import ptBrLang from '../../json/language/pt-br';
+import ptBrLang from '../../config/language/pt-br';
 
 import nomeImg from '../../assets/img/nome.png';
 
