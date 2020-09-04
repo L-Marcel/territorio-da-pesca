@@ -8,16 +8,18 @@ import Header from '../../components/Header';
 import ptBrLang from '../../config/language/pt-br';
 
 import getRouteParamOfPath from '../../util/getRouteParamOfPath';
+import convertUTMToDecimalPosition from '../../util/convertUTMToDecimalPosition';
 
 import LangFileProps from '../../config/language/interface';
 import Sections from '../../components/Sections';
 import getLeafletIcon from '../../config/icons';
 
+import points from '../../config/json/pontos.json'; 
+
 const PointsMap = () => {
     const [content, setContent] = useState<LangFileProps>(ptBrLang);
     const path = useLocation().pathname;
     const lang = getRouteParamOfPath(path, 0);
-    const position = [-5.11127, -36.6261, 15];
 
     return(
         <> 
@@ -25,18 +27,28 @@ const PointsMap = () => {
             <div id="page">
                 <Sections content={[{ type: "Text", title: "PRIMEIRO NOS DIGA O QUE PROCURA", subtitle: "Colocamos os filtros aqui depois" }]}/>
                 <div className="leaflet-map-container">
-                    <Map center={[position[0], position[1]]} zoom={position[2]} className="leaflet-map">
+                    <Map center={convertUTMToDecimalPosition(["780335.79", "9438070.15"], "24M")} zoom={13} className="leaflet-map">
                         <TileLayer
                             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         
-                        <Marker position={[-5.110568, -36.626979]} icon={getLeafletIcon("home", "blue")}>
-                            <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
-                        </Marker>
-                        <Marker position={[-5.110568, -36.625959]} icon={getLeafletIcon("coffee", "red")}>
-                            <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
-                        </Marker>
+                        {
+                            points.map(function(item, index){
+                                //Vai rodar todo o arquivo json
+
+                                //Use o Item.Tipo para filtrar as cores e icones do marcador
+                                
+                                //Obs: O item.Id -> 158 ficou livre para uso.
+                                //Motivo: Era um marcador vazio.
+                               
+                                return(
+                                    <Marker key={index} position={convertUTMToDecimalPosition([item.Latitude, item.Longitude], item.Zona)} icon={getLeafletIcon("home", "blue")}>
+                                        <Popup>{item.Nome}</Popup>
+                                    </Marker>
+                                );
+                            })
+                        }
                     </Map>
                     
                     <div className="leaflet-map-menu">

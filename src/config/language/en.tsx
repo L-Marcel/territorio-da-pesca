@@ -20,7 +20,7 @@ const enLang: LangFileProps = {
         }
     ],
     headerButton: {
-        name: "Map",
+        name: "Complete Map",
         route: "/en/map"
     },
     home: {

@@ -22,7 +22,7 @@ const ptBrLang: LangFileProps = {
         }
     ],
     headerButton: {
-        name: "Mapa",
+        name: "Mapa Completo",
         route: "/pt-br/map"
     },
     home: {
