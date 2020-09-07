@@ -25,11 +25,20 @@ const PointsMap = () => {
     const [list, setList] = useState(points);
     const [filterList, setFilterList] = useState(list);
     const [query, setQuery] = useState("");
-    const [tipos, setTipos] = useState({
-        1:true,
-        2:true,
-        3:true
-
+    const type1 = list.filter(function(item){
+        if(item.Tipo===1){
+            return item;
+        }
+    });
+    const type2 = list.filter(function(item){
+        if(item.Tipo===2){
+            return item;
+        }
+    });
+    const type3 = list.filter(function(item){
+        if(item.Tipo===3){
+            return item;
+        }
     });
     
     useEffect (() =>{
@@ -53,11 +62,11 @@ const PointsMap = () => {
                             <Filter onChangeQuery={(value : string) => {setQuery(value)}}/>
                             <br/>    
                             <ul>
-                                <li><a href="#">Tipo</a>
+                                <li><a href="#" onClick={() => setFilterList(list)}>Tipo</a>
                                     <ul>
-                                        <li><a href="#1"  onClick={() => setQuery("1")}>1</a></li>
-                                        <li><a href="#2">2</a></li>
-                                        <li><a href="#3">3</a></li>
+                                        <li><a href="#1"  onClick={() => setFilterList(type1)}>Turismo</a></li>
+                                        <li><a href="#2" onClick={() => setFilterList(type2)}>Pesca artesanal</a></li>
+                                        <li><a href="#3" onClick={() => setFilterList(type3)}>Serviços urbanos</a></li>
                                     </ul>
                                 </li>
                                 <li><a>Ordenar de A a Z</a></li>
@@ -72,18 +81,31 @@ const PointsMap = () => {
                         
                         {
                             filterList.map(function(item, index){
-                                //Vai rodar todo o arquivo json
-
-                                //Use o Item.Tipo para filtrar as cores e icones do marcador
+                                if(item.Tipo===1){
+                                    return(
+                                        <Marker key={index} position={convertUTMToDecimalPosition([item.Latitude, item.Longitude], item.Zona)} icon={getLeafletIcon("home", "red")}>
+                                            <Popup>{item.Nome}</Popup>
+                                        </Marker>
+                                    
+                                    ); 
+                                }
+                                if(item.Tipo===2){
+                                    return(
+                                        <Marker key={index} position={convertUTMToDecimalPosition([item.Latitude, item.Longitude], item.Zona)} icon={getLeafletIcon("home", "blue")}>
+                                            <Popup>{item.Nome}</Popup>
+                                        </Marker>
+                                    
+                                    ); 
+                                }
+                                if(item.Tipo===3){
+                                    return(
+                                        <Marker key={index} position={convertUTMToDecimalPosition([item.Latitude, item.Longitude], item.Zona)} icon={getLeafletIcon("home", "green")}>
+                                            <Popup>{item.Nome}</Popup>
+                                        </Marker>
+                                    
+                                    ); 
+                                }
                                 
-                                //Obs: O item.Id -> 158 ficou livre para uso.
-                                //Motivo: Era um marcador vazio.
-                               
-                                return(
-                                    <Marker key={item.Tipo} position={convertUTMToDecimalPosition([item.Latitude, item.Longitude], item.Zona)} icon={getLeafletIcon("home", "blue")}>
-                                        <Popup>{item.Nome}</Popup>
-                                    </Marker>
-                                );
                             })
                         }
                     </Map>
