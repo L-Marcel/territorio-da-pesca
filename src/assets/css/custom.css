@@ -61,20 +61,64 @@ background: var(--main-color);
 .leaflet-map-container {
     display: flex;
     flex-direction: row;
-    padding-right: 100px !important;
-    padding-left: 100px !important;
+    margin-top: 83px;
 }
-
 .leaflet-map {
     width: 100%;
     height: 80vh;
 }
 
 .leaflet-map-menu {
-    display: flex;
-    flex-direction: column;
+    width: 20%;
     height: 80vh;
-    width: 0%;
+    text-align: center;
+    background-color: var(--po-azul);
+    border: 5px solid var(--verde-azul-medio);
+    color: var(--main-color);
+  
+}
+.leaflet-map-menu input{
+    margin: 15px;
+    border-radius: 5px;
+    border-color: var(--main-color);
+    background-color: var(--white-color);
+}
+.leaflet-map-menu ul{
+    margin: 0px;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+    width: auto;
+}
+.leaflet-map-menu ul li a:hover{
+    background-color: var(--verde-azul-medio);
+}
+.leaflet-map-menu ul li{position: relative;}
+
+.leaflet-map-menu li ul{
+    position: relative;
+    bottom: 149px;
+    top: 0;
+    display: none;
+}
+.leaflet-map-menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background-color: var(--verdete);
+}
+.leaflet-map-menu li:hover ul { 
+   
+    display: block;
+}
+.leaflet-map-menu li ul a:hover{
+    background-color: var(--po-azul);
+    margin: 2px;
+    color: var(--main-color);
 }
 
 @media (max-width: 992px) {
