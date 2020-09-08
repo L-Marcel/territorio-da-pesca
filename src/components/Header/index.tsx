@@ -25,10 +25,11 @@ export interface LangGroupProps {
 
 interface HeaderProps {
     language: string;
+    scrolled?: boolean;
     onChangeLanguage: (json: LangFileProps) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ language, onChangeLanguage }) => {
+const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage }) => {
     const [lang, setLang] = useState<LangProps>({
         type: "Lang",
         name: "Brasil",
@@ -40,6 +41,8 @@ const Header: React.FC<HeaderProps> = ({ language, onChangeLanguage }) => {
     const history = useHistory();
     const path = history.location.pathname.split('/');
 
+    const startScrolled = scrolled? scrolled:false;
+
     useEffect(() => {
         const value = getLanguageFile(language);
         setLang(value);
@@ -48,9 +51,9 @@ const Header: React.FC<HeaderProps> = ({ language, onChangeLanguage }) => {
     }, [language, onChangeLanguage]);
 
     return(
-        <header id="header" className="fixed-top">
+        <header id="header" className={!startScrolled? `fixed-top`:`fixed-top header-scrolled`}>
             <div className="container d-flex align-items-center justify-space-between">
-                <img src={nomeImg } className="logo-header"></img>
+                    <h1 className="logo mr-auto">???</h1>
                 <div className="nav-menu-container">
                     <nav className="nav-menu d-none d-lg-block">
                         <ul>

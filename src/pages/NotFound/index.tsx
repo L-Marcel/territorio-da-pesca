@@ -11,10 +11,12 @@ import getRouteParamOfPath from '../../util/getRouteParamOfPath';
 import LangFileProps from '../../config/language/interface';
 
 const NotFound = () => {
+    //Carregar pacote de linguagem
     const [content, setContent] = useState<LangFileProps>(ptBrLang);
+
+    //Constantes de rota
     const path = useLocation().pathname;
     const lang = getRouteParamOfPath(path, 0);
-
 
     return(
         <>  

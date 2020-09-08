@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer = () => {
+interface FooterProps {
+    needResume?: boolean;
+}
+
+const Footer: React.FC<FooterProps> = ({ needResume }) => {
+
+    const resume = needResume? needResume:false;
+
     return(
         <footer id="footer">
-            <div className="footer-top">
+            { !resume && <div className="footer-top">
                 <div className="container">
                     <div className="row">
 
@@ -48,7 +55,7 @@ const Footer = () => {
 
                     </div>
                 </div>
-            </div>
+            </div> }
             <div className="container d-md-flex py-4">
                 <div className="mr-md-auto text-center text-md-left">
                     <div className="copyright">

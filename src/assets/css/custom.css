@@ -30,6 +30,9 @@
     --verde-azul-medio: #98d7d0;
     --verdete: #5ec2b7;
     --teal-de-aco: #4d8688;
+    --color-type-1: rgb(0, 183, 255);
+    --color-type-2: rgb(218, 0, 0);
+    --color-type-3: rgb(16, 173, 16);
 }
 
 ::-webkit-scrollbar {
@@ -58,89 +61,160 @@ background: var(--main-color);
     }
 }
 
+.within-scroll {
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden;
+}
+
 .leaflet-map-container {
     display: flex;
     flex-direction: row;
-    margin-top: 83px;
+    margin-top: 82px;
 }
+
 .leaflet-map {
     width: 100%;
-    height: 80vh;
+    height: 78vh;
 }
 
 .leaflet-map-menu {
-    width: 20%;
-    height: 80vh;
-    text-align: center;
-    background-color: var(--po-azul);
-    border: 5px solid var(--verde-azul-medio);
+    position: absolute;
+    background-color: transparent;
     color: var(--main-color);
-  
-}
-.leaflet-map-menu input{
-    margin: 15px;
-    border-radius: 5px;
-    border-color: var(--main-color);
-    background-color: var(--white-color);
-}
-.leaflet-map-menu ul{
-    margin: 0px;
-    padding: 0;
-    text-align: left;
-    list-style: none;
-    width: auto;
-}
-.leaflet-map-menu ul li a:hover{
-    background-color: var(--verde-azul-medio);
-}
-.leaflet-map-menu ul li{
-    position: relative;
+    width: 0;
+    height: 0;
+    z-index: 1010;
 }
 
-.leaflet-map-menu li ul{
-    position: relative;
-    bottom: 149px;
-    top: 0;
-    display: none;
+.leaflet-map-menu .wrapper {
+    color: var(--true-black-color);
+    position: relative; 
 }
-.leaflet-map-menu ul li a{
-    display: block;
+
+.leaflet-map-menu .wrapper svg {
+    position: absolute; 
+    margin-left: 3.35rem;
+    margin-top: 1.05rem;
+    pointer-events: none;
+}
+
+.leaflet-map-menu input {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+    padding-left: 2.5rem;
+    border-radius: 4px;
+    margin-left: 2.9rem;
+    margin-top: 0.6rem;
+    width: 20rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+    border: none;
+    transition: width .5s;
+}
+
+.leaflet-map-menu input[value=""]{
+    width: 2.5rem;
+}
+
+.leaflet-map-menu input:hover {
+    width: 20rem;
+}
+
+.leaflet-map-menu input:focus {
+    outline: none;
+    width: 20rem;
+}
+
+.filter-button-container {
+    margin-top: 32.2rem;
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+}
+
+.filter-button {
+    border-radius: 4px;
+    margin-left: 0.7rem;
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
     color: var(--main-color);
     padding: 5px;
-    margin: 2px;
-    border: 1px solid var(--secondary-color);
-    border-radius: 5px;
-    background-color: var(--verdete);
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: left;
+    background-color: var(--white-secondary);
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: width .5s, background-color 1s, color 1s;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
 }
-.leaflet-map-menu li:hover ul { 
-   
-    display: block;
+
+.filter-button div {
+    font-size: 0;
+    width: 0;
+    transition: font-size .1s, width .5s;
 }
-.leaflet-map-menu li ul a{
-    background-color: var(--main-color);
-    color: var(--verde-azul-medio);
+
+.filter-button:hover {
+    justify-content: left;
+    width: 14rem;
 }
-.leaflet-map-menu li ul a:hover{
-    background-color: var(--po-azul);
-    margin: 2px;
-    color: var(--main-color);
+
+.filter-button:hover div {
+    padding: 5px;
+    width: 11.5rem;
+    font-size: 1.4rem;
+    animation: expandButtonMap linear .5s;
+}
+
+
+.button-type-1 {
+    background-color: var(--white-secondary);
+    color: var(--true-black-color);
+}
+
+.button-type-2 {
+    background-color: var(--white-secondary);
+    color: var(--true-black-color);
+}
+
+.button-type-3 {
+    background-color: var(--white-secondary);
+    color: var(--true-black-color);
+}
+
+.button-type-1-active {
+    color: var(--white-secondary);
+    background-color: var(--color-type-1);
+}
+
+.button-type-2-active {
+    color: var(--white-secondary);
+    background-color: var(--color-type-2);
+}
+
+.button-type-3-active {
+    color: var(--white-secondary);
+    background-color: var(--color-type-3);
+}
+
+.filter-button:focus {
+    outline-style: none;
 }
 
 @media (max-width: 992px) {
     .leaflet-map {
         width: 100%;
-        height: 80vh;
-        
+        height: 78vh;
     }
     
     .leaflet-map-container {
         display: flex;
         flex-direction: column;
-      
-      
     }
-    
+
     .leaflet-map-menu {
         display: flex;
         flex-direction: column;
@@ -156,7 +230,6 @@ background: var(--main-color);
 .alt-bg-color {
     background-color: var(--crayola-amarela) !important;
 }
-
 
 .alt-bg-color:hover {
     background-color: var(--main-color) !important;
@@ -199,3 +272,13 @@ background: var(--main-color);
     background: transparent;
     border: none;
 }  
+
+@keyframes expandButtonMap {
+    0% {
+        font-size: 0;
+        width: 0;
+    }
+    50% {
+        font-size: 0;
+    }
+}

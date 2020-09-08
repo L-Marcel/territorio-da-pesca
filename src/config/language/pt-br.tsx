@@ -25,6 +25,20 @@ const ptBrLang: LangFileProps = {
         name: "Mapa Completo",
         route: "/pt-br/map"
     },
+    completeMap: [
+        {  
+            name: "Pesca Artesanal",
+            isActive: true
+        },
+        {  
+            name: "Serviços Urbanos",
+            isActive: true
+        },
+        {  
+            name: "Turismo",
+            isActive: true
+        },
+    ],
     home: {
         title: "BEM-VINDO",
         subtitle: "AO TERRITÓRIO DA PESCA",

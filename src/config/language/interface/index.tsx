@@ -7,6 +7,10 @@ export default interface LangFileProps {
         name: string;
         route: string;
     },
+    completeMap: {  
+        name: string,
+        isActive: boolean
+    }[],
     home: {
         title: string,
         subtitle: string,

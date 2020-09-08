@@ -23,6 +23,20 @@ const enLang: LangFileProps = {
         name: "Complete Map",
         route: "/en/map"
     },
+    completeMap: [
+        {  
+            name: "Pesca Artesanal",
+            isActive: true
+        },
+        {  
+            name: "Serviços Urbanos",
+            isActive: true
+        },
+        {  
+            name: "Turismo",
+            isActive: true
+        },
+    ],
     home: {
         title: "WELLCOME",
         subtitle: "AO TERRITÓRIO DA PESCA",
