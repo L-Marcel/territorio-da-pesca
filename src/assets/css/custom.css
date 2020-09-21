@@ -1,10 +1,9 @@
 :root {
-    --main-color: #2d727e;
+    
     --main-color-alt: #2d727ea1;
     --secondary-color: #3a8491;
     --simples-primary-color: #ee9293;
     --true-black-color: #252525;
-    --black-color: #2f4144;
     --black-secondary-color: #2f555c;
     --black-simples-color: #111;
     --black-other-color: #2b2b2b;
@@ -33,22 +32,32 @@
     --color-type-1: rgb(0, 183, 255);
     --color-type-2: rgb(218, 0, 0);
     --color-type-3: rgb(16, 173, 16);
+
+    --USAFA-blue: #015486;
+    --Green-blue-crayola: #3884b8;
+    --Blue-Munsell: #0291a2;
+    --Gainsboro: #d6dae5;
+    --Almond: #e0d3c3;
+    --Almond2: #dacabb;
+    --Pale-Silver: #c3b9ad;
+    --Grullo: #ad9879;
+    
 }
 
 ::-webkit-scrollbar {
     width: 8px;
 }
   
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track { /*cor de fundo barra de rolagem */
 background: #f1f1f1;
 }
 
-::-webkit-scrollbar-thumb {
-background: var(--secondary-color);
+::-webkit-scrollbar-thumb { /*Mudar cor da barra de rolagem*/
+background: var(--Green-blue-crayola);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background: var(--main-color);
+background: var(--USAFA-blue);
 }
 
 .first-item-of-page {
@@ -70,18 +79,18 @@ background: var(--main-color);
 .leaflet-map-container {
     display: flex;
     flex-direction: row;
-    margin-top: 82px;
+    margin-top: 66px;
 }
 
 .leaflet-map {
     width: 100%;
-    height: 78vh;
+    height: 80vh;
 }
 
 .leaflet-map-menu {
     position: absolute;
     background-color: transparent;
-    color: var(--main-color);
+    color: var(--USAFA-blue);
     width: 0;
     height: 0;
     z-index: 1010;
@@ -126,7 +135,7 @@ background: var(--main-color);
 }
 
 .filter-button-container {
-    margin-top: 32.2rem;
+    margin-top: 23rem;
     display: flex;
     flex-direction: row;
     width: 10rem;
@@ -138,7 +147,7 @@ background: var(--main-color);
     display: flex;
     flex-direction: row;
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--USAFA-blue);
     padding: 5px;
     width: 2.5rem;
     height: 2.5rem;
@@ -232,27 +241,47 @@ background: var(--main-color);
 }
 
 .alt-bg-color:hover {
-    background-color: var(--main-color) !important;
+    background-color: black !important;
 }
 
 .button-home {
-    background-color: var(--crayola-opacity-amarela) !important;
+    background-color: transparent !important;
+    border-color: var(--Grullo) !important;
+    color: var(--Grullo) !important;
+    border-radius: 5px !important;
 }
 
 .button-home:hover {
     background-color: transparent !important;
-    border-color: var(--crayola-opacity-amarela) !important;
-    color: var(--crayola-opacity-amarela) !important;
+    border-color: var(--Green-blue-crayola) !important;
+    color: var(--Blue-Munsell) !important;
+    
+}
+
+#header .get-started-btn{
+    background-color: transparent!important;
+    border-color: var(--Grullo) !important;
+    color: var(--Grullo) !important;
 }
 
 #header .get-started-btn:hover {
-    background-color: transparent !important;
-    border-color: var(--main-color) !important;
-    color: var(--main-color) !important;
+    background-color: var(--Almond2) !important;
+    border-color: var(--Grullo) !important;
+    color: var(--white-color) !important;
+}
+#header.header-scrolled .get-started-btn { /*cor do botão apos rolagem*/
+    background-color: var(--Green-blue-crayola) !important;
+    border-color: var(--USAFA-blue) !important;
+    color: var(--white-color) !important;
+}
+#header.header-scrolled .get-started-btn:hover { /*cor do botão apos rolagem*/
+    background-color: var(--Almond2) !important;
+    border-color: var(--USAFA-blue) !important;
+    color: var(--Green-blue-crayola) !important;
 }
 
 .header-scrolled .get-started-btn:hover {
-    color: var(--black-color);
+    color: var(--Blue-Munsell);
 }
 
 .logo-header {

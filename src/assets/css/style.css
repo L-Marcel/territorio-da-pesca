@@ -8,7 +8,17 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
+:root{
+  
+  --USAFA-blue: #015486;
+  --Green-blue-crayola: #3884b8;
+  --Blue-Munsell: #0291a2;
+  --Gainsboro: #d6dae5;
+  --Almond: #e0d3c3;
+  --Almond2: #dacabb;
+  --Pale-Silver: #c3b9ad;
+  --Grullo: #ad9879;
+}
 * {
   margin: 0;
   padding: 0;
@@ -29,8 +39,8 @@ body {
   color: var(--body-color);
 }
 
-a {
-  color: var(--main-color);
+a { 
+  color: var(--USAFA-blue);
   text-decoration: none !important;
 }
 
@@ -63,12 +73,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
   border-radius: 4px;
   background: var(--vermelho-amarelo-max); /*Cor do botão voltar para cima*/
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: var(--secondary-color);
+  background: var(--Green-blue-crayola);
   color: var(--white-color);
 }
 
@@ -85,17 +95,29 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: var(--crayola-amarela);
+  background: transparent;
   transition: all 0.5s;
   z-index: 1005;
   padding: 20px 0;
 }
 
+.pointPage #header {
+  background-image: linear-gradient(10deg,var(--Almond) 0%, var(--Almond2) 15%, var(--Blue-Munsell) 50%, var(--USAFA-blue) 100%);
+  padding: 12px 0;
+}
 
 #header.header-scrolled {
   padding: 12px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  background-color: var(--verde-azul-medio); /*Mudar cor após transição*/
+  background-image: linear-gradient(90deg,var(--Almond) 0%, var(--Almond2) 15%, var(--Blue-Munsell) 50%, var(--USAFA-blue) 100%);
+}
+
+#header.header-scrolled a{ /*mudar letras, após rolagem*/
+  color:var(--Almond2);
+  
+}
+#header.header-scrolled a:hover{ /*mudar letras, após rolagem*/
+  color:var(--Grullo);
 }
 
 #header .logo {
@@ -108,16 +130,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo a {
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
 }
 
 #header .logo a span {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 #header .logo img {
   max-height: 40px;
 }
+
 
 @media (max-width: 992px) {
   #header {
@@ -151,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: var(--black-color);
+  color: var(--Almond2);
   transition: 0.3s;
   font-size: 15px;
   font-weight: 600;
@@ -159,8 +182,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: var(--main-color);
+  color: var(--Grullo);
 }
+
+
 
 .nav-menu .drop-down ul {
   display: block;
@@ -194,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: var(--main-color);
+  color: var(--USAFA-blue); /*Não sei o que é*/
 }
 
 .nav-menu .drop-down > a:after {
@@ -240,10 +265,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Get Startet Button */
 .get-started-btn {
   margin-left: 25px;
-  background: var(--main-color); /*Muda a cor do botão mapa*/
+  background: var(--USAFA-blue); /*Muda a cor do botão mapa - mudar no custom*/
   color: var(--white-color);
   border-radius: 4px;
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--USAFA-blue);
   padding: 7px 24px;
   white-space: nowrap;
   transition: 0.3s;
@@ -281,7 +306,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: var(--black-color);
+  color: var(--Grullo);
+}
+.mobile-nav-toggle i:hover{
+  color: var(--Green-blue-crayola);
 }
 
 .mobile-nav {
@@ -292,8 +320,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: var(--white-color);
-  transition: ease-in-out 0.2s;
+  background-color: var(--Green-blue-crayola);
+  transition: ease-in 0.5s, width 4s, height 15s, transform 3s;
   opacity: 0;
   visibility: hidden;
   border-radius: 10px;
@@ -309,16 +337,17 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: var(--black-color);
+  color: var(--Almond2); /*nome no menu responsivo*/
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: var(--main-color);
+  color: var(--Grullo); /*nome no menu responsivo hover*/
   text-decoration: none;
 }
+
 
 .mobile-nav .drop-down > a:after {
   content: "\ea99";
@@ -377,7 +406,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("https://defato.com/_ups/noticias/2019/10/19/89bf2f5acf8fbfd6f78df5862f614051.jpg") top center no-repeat;
+  background: url(../img/fundo5.JPG) top center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 82px;
@@ -417,14 +446,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   transition: 0.5s;
   margin-top: 10px;
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
   background-color: var(--crayola-amarela); /*mudar em custom*/
   border: 2px solid var(--vermelho-amarelo-max);
 }
 
 #hero .btn-get-started:hover {
   background: transparent; /*mudar em custom*/
-  border-color: var(--main-color);
+  border-color: var(--USAFA-blue);
   color: var(--white-color);
   opacity: 10;
   
@@ -480,7 +509,8 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--main-color);/*mudar tracinho embaixo dos nomes*/
+  background: var(--Almond2) ;/*mudar tracinho embaixo dos nomes*/
+
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -491,12 +521,12 @@ section {
 
 .section-bg {
   padding: 120px 0;
-  color: var(--black-color);
+  color: var(--Almond);
 }
 
 .section-bg:before {
   content: "";
-  background: var(--crayola-amarela); /*lista com o conteudo*/
+  background: var(--Grullo); /*listra com o conteudo*/
   position: absolute;
   bottom: 60px;
   top: 60px;
@@ -552,7 +582,7 @@ section {
 .breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
-  color: var(--main-color);
+  color: var(--USAFA-blue); /*não sei o que é*/
   content: "/";
 }
 
@@ -567,7 +597,6 @@ section {
 }
 
 .clients .owl-item img {
-  width: 60%;
   opacity: 0.5;
   transition: 0.3s;
   -webkit-filter: grayscale(100);
@@ -595,7 +624,7 @@ section {
 }
 
 .clients .owl-dot.active {
-  background-color: var(--main-color) !important;
+  background-color: var(--USAFA-blue) !important;
 }
 
 /*--------------------------------------------------------------
@@ -630,7 +659,7 @@ section {
   font-size: 13px;
   display: inline-flex;
   align-items: center;
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--USAFA-blue);
 }
 
 .about .content .about-btn i {
@@ -639,8 +668,8 @@ section {
 }
 
 .about .content .about-btn:hover {
-  background: var(--secondary-color);
-  background: var(--main-color);
+  background: var(--Green-blue-crayola);
+  background: var(--USAFA-blue);
 }
 
 .about .icon-boxes .icon-box {
@@ -649,7 +678,7 @@ section {
 
 .about .icon-boxes .icon-box i {
   font-size: 40px;
-  color: var(--main-color);
+  color: var(--USAFA-blue);
   margin-bottom: 10px;
 }
 
@@ -700,7 +729,7 @@ section {
   font-size: 24px;
   background: var(--white-color);
   padding: 12px;
-  color: var(--main-color);
+  color: var(--USAFA-blue);
   border-radius: 50px;
   border: 2px solid var(--white-color);
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
@@ -710,7 +739,7 @@ section {
   font-size: 36px;
   display: block;
   font-weight: 700;
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
 }
 
 .counts .count-box p {
@@ -728,10 +757,10 @@ section {
 }
 
 .tabs .nav-link {
-  border: 1px solid var(--gray-other-secondary-color);
+  border: 1px solid var(--gray-other-Green-blue-crayola);
   padding: 15px;
   transition: 0.3s;
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
   border-radius: 0;
   display: flex;
   align-items: center;
@@ -750,13 +779,13 @@ section {
 }
 
 .tabs .nav-link:hover {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 .tabs .nav-link.active {
-  background: var(--main-color);
+  background: var(--USAFA-blue);
   color: var(--white-color);
-  border-color: var(--main-color);
+  border-color: var(--USAFA-blue);
 }
 
 @media (max-width: 768px) {
@@ -797,7 +826,7 @@ section {
 .tabs .tab-pane ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 .tabs .tab-pane p:last-child {
@@ -811,7 +840,7 @@ section {
   margin-bottom: 20px;
   padding: 30px;
   border-radius: 6px;
-  background: var(--true-black-color);
+  background: var(--true-B--Blue-Munsell);
   transition: 0.3s;
 }
 
@@ -821,7 +850,7 @@ section {
 
 .services .icon-box i {
   float: left;
-  color: var(--main-color);
+  color: var(--USAFA-blue);
   font-size: 40px;
 }
 
@@ -842,7 +871,7 @@ section {
 }
 
 .services .icon-box .icon-box:hover h4 a {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 .services .icon-box p {
@@ -881,7 +910,7 @@ section {
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   color: var(--white-color);
-  background: var(--main-color);
+  background: var(--USAFA-blue);
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1046,7 +1075,7 @@ section {
 }
 
 .testimonials .owl-dot.active {
-  background-color: var(--main-color) !important;
+  background-color: var(--USAFA-blue) !important;
 }
 
 @media (max-width: 767px) {
@@ -1114,7 +1143,7 @@ section {
 }
 
 .pricing .box ul i {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1148,7 +1177,7 @@ section {
 }
 
 .pricing .featured {
-  background: var(--main-color);
+  background: var(--USAFA-blue);
 }
 
 /*--------------------------------------------------------------
@@ -1168,7 +1197,7 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: var(--main-color);
+  font-family: var(--USAFA-blue);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1196,7 +1225,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1234,20 +1263,20 @@ section {
 
 .team .member .social a {
   transition: color 0.3s;
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
   margin: 0 3px;
   padding-top: 7px;
   border-radius: 50px;
   width: 36px;
   height: 36px;
-  background: var(--main-color);
+  background: var(--USAFA-blue);
   display: inline-block;
   transition: ease-in-out 0.3s;
   color: var(--white-color);
 }
 
 .team .member .social a:hover {
-  background: var(--black-color);
+  background: var(--Blue-Munsell);
 }
 
 .team .member .social i {
@@ -1262,7 +1291,7 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
 }
 
 .team .member .member-info span {
@@ -1297,7 +1326,7 @@ section {
 
 .contact .info-box i {
   font-size: 32px;
-  color: var(--main-color);
+  color: var(--USAFA-blue);
   border-radius: 50%;
   padding: 8px;
   border: 2px dotted var(--contact-info-color);
@@ -1384,7 +1413,7 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: var(--black-color);
+  border-color: var(--Blue-Munsell);
 }
 
 .contact .php-email-form input {
@@ -1396,7 +1425,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: var(--main-color);
+  background: var(--USAFA-blue);
   border: 0;
   padding: 10px 32px;
   color: var(--white-color);
@@ -1405,7 +1434,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: var(--secondary-color);
+  background: var(--Green-blue-crayola);
 }
 
 @-webkit-keyframes animate-loading {
@@ -1457,7 +1486,7 @@ section {
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: var(--main-color) !important;
+  background-color: var(--USAFA-blue) !important;
 }
 
 .portfolio-details .portfolio-info {
@@ -1537,12 +1566,12 @@ section {
 }
 
 .blog .entry .entry-title a {
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
   transition: 0.3s;
 }
 
 .blog .entry .entry-title a:hover {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 .blog .entry .entry-meta {
@@ -1585,7 +1614,7 @@ section {
 
 .blog .entry .entry-content .read-more a {
   display: inline-block;
-  background: var(--main-color);
+  background: var(--USAFA-blue);
   color: var(--white-color);
   padding: 6px 20px;
   transition: 0.3s;
@@ -1643,7 +1672,7 @@ section {
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: var(--black-color);
+  background-color: var(--Blue-Munsell);
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -1664,7 +1693,7 @@ section {
 }
 
 .blog .entry .entry-footer a:hover {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 .blog .entry .entry-footer .cats {
@@ -1769,12 +1798,12 @@ section {
 }
 
 .blog .blog-comments .comment h5 a:hover {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 .blog .blog-comments .comment h5 .reply {
   padding-left: 10px;
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
 }
 
 .blog .blog-comments .comment time {
@@ -1838,11 +1867,11 @@ section {
   border-radius: 4px;
   padding: 8px 20px;
   border: 0;
-  background-color: var(--black-color);
+  background-color: var(--Blue-Munsell);
 }
 
 .blog .blog-comments .reply-form .btn-primary:hover {
-  background-color: var(--main-color);
+  background-color: var(--USAFA-blue);
 }
 
 .blog .blog-pagination {
@@ -1872,8 +1901,8 @@ section {
 }
 
 .blog .blog-pagination li.active, .blog .blog-pagination li:hover {
-  background: var(--main-color);
-  border: 1px solid var(--main-color);
+  background: var(--USAFA-blue);
+  border: 1px solid var(--USAFA-blue);
 }
 
 .blog .blog-pagination li.active a, .blog .blog-pagination li:hover a {
@@ -1902,7 +1931,7 @@ section {
   font-weight: 700;
   padding: 0 0 0 0;
   margin: 0 0 15px 0;
-  color: var(--black-color);
+  color: var(--Blue-Munsell);
   position: relative;
 }
 
@@ -1934,7 +1963,7 @@ section {
   font-size: 16px;
   padding: 0 15px;
   margin: -1px;
-  background: var(--main-color);
+  background: var(--USAFA-blue);
   color: var(--white-color);
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -1954,11 +1983,11 @@ section {
 }
 
 .blog .sidebar .categories ul a {
-  color: var(--gray-true-secondary-color);
+  color: var(--gray-true-Green-blue-crayola);
 }
 
 .blog .sidebar .categories ul a:hover {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 .blog .sidebar .categories ul a span {
@@ -1988,7 +2017,7 @@ section {
 }
 
 .blog .sidebar .recent-posts h4 a:hover {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 .blog .sidebar .recent-posts time {
@@ -2013,19 +2042,19 @@ section {
 }
 
 .blog .sidebar .tags ul a {
-  color: var(--gray-true-secondary-color);
+  color: var(--gray-true-Green-blue-crayola);
   font-size: 14px;
   padding: 6px 14px;
   margin: 0 6px 8px 0;
-  border: 1px solid var(--gray-secondary-color);
+  border: 1px solid var(--gray-Green-blue-crayola);
   display: inline-block;
   transition: 0.3s;
 }
 
 .blog .sidebar .tags ul a:hover {
   color: var(--white-color);
-  border: 1px solid var(--black-color);
-  background: var(--black-color);
+  border: 1px solid var(--Blue-Munsell);
+  background: var(--Blue-Munsell);
 }
 
 .blog .sidebar .tags ul a span {
@@ -2040,12 +2069,15 @@ section {
 #footer {
   color: var(--white-color);
   font-size: 14px;
-  background: var(--black-color);
+  background-image: linear-gradient(white 0%,  var(--Almond) 10%, var(--Almond2) 30%, var(--Pale-Silver) 45%,  var(--Blue-Munsell) 75%, var(--USAFA-blue) 100%);
+}
+.pointPage #footer{
+  background-image: linear-gradient(170deg, var(--Almond)0%, var(--Almond2) 25%, var(--Pale-Silver)30%, var(--Blue-Munsell)50%, var(--USAFA-blue)100%);
 }
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: var(--black-secondary-color);
+  background-color: transparent;
 }
 
 #footer .footer-top .footer-contact {
@@ -2059,7 +2091,7 @@ section {
 }
 
 #footer .footer-top .footer-contact h3 span {
-  color: var(--main-color);
+  color: var(--USAFA-blue);
 }
 
 #footer .footer-top .footer-contact p {
@@ -2082,7 +2114,7 @@ section {
   display: block;
   width: 20px;
   height: 2px;
-  background: var(--main-color);
+  background: var(--Grullo);
   bottom: 0;
   left: 0;
 }
@@ -2099,7 +2131,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: white;
+  color: var(--USAFA-blue); /*Setas submenu*/
   font-size: 18px;
   line-height: 1;
 }
@@ -2115,7 +2147,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: var(--gray-color);
+  color: white; /*cor submenu*/
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -2123,7 +2155,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: var(--white-color);
+  color: var(--Grullo);
 }
 
 #footer .footer-newsletter {
@@ -2161,7 +2193,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: var(--main-color);
+  background: var(--USAFA-blue);
   color: var(--white-color);
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -2169,7 +2201,7 @@ section {
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-  background: var(--secondary-color);
+  background: var(--Green-blue-crayola);
 }
 
 #footer .credits {
@@ -2180,7 +2212,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: var(--black-other-color);
+  background: var(--Green-blue-crayola); /*Icones color */
   color: var(--white-color);
   line-height: 1;
   padding: 8px 0;
@@ -2191,9 +2223,19 @@ section {
   height: 36px;
   transition: 0.3s;
 }
+.pointPage #footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: var(--Green-blue-crayola); /*Icones color pagina mapa */
+  margin-top: -20px;
+  width: 31px;
+  height: 31px;
+ 
+}
 
 #footer .social-links a:hover {
-  background: var(--main-color);
+  background: transparent;
   color: var(--white-color);
   text-decoration: none;
 }
+

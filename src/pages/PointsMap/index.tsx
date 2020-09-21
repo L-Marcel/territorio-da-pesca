@@ -64,7 +64,7 @@ const PointsMap = () => {
         setFilterList(filterItens);
     }
     
-    //O useEffect nem sempre atualizar perfeitamente, nesse caso, como eu usei
+    //O useEffect nem sempre atualiza perfeitamente, nesse caso, como eu usei
     //um estado com atributos (FilterButtons) e só o isActive atualiza, ele não
     //chamava o useEffect. Então, eu criei uma função que o useEffect chama quando o
     //query muda e quando a função updateFilterButton é chamada
@@ -72,8 +72,9 @@ const PointsMap = () => {
     
     return(
         <> 
-            <Header language={lang} onChangeLanguage={(json) => {setContent(json)}}/>
-            <div id="page" className="within-scroll">
+        <div className="pointPage">
+            <Header language={lang} onChangeLanguage={(json) => {setContent(json)}} />
+            <div id="page" className="within-scroll" >
                 <div className="leaflet-map-container">
                     <Map center={convertUTMToDecimalPosition(["780335.79", "9438070.15"], "24M")} zoom={13} className="leaflet-map">
                         <TileLayer
@@ -142,6 +143,7 @@ const PointsMap = () => {
                 </div>
                 <Footer needResume/>
             </div>
+        </div>
         </>
     );
 }

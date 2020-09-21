@@ -7,7 +7,7 @@ import getLanguageFile, { langOptions } from '../../util/getLanguageFile';
 
 import ptBrLang from '../../config/language/pt-br';
 
-import nomeImg from '../../assets/img/nome.png';
+import nomeImg from '../../assets/img/logo.png';
 
 export interface LangProps {
     type: "Lang",
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
     return(
         <header id="header" className={!startScrolled? `fixed-top`:`fixed-top header-scrolled`}>
             <div className="container d-flex align-items-center justify-space-between">
-                    <h1 className="logo mr-auto">???</h1>
+                <h1 className="logo mr-auto"><img src={nomeImg}></img></h1>
                 <div className="nav-menu-container">
                     <nav className="nav-menu d-none d-lg-block">
                         <ul>
