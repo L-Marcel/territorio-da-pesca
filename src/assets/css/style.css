@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-scrolled {
   padding: 12px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(90deg,var(--Almond) 0%, var(--Almond2) 15%, var(--Blue-Munsell) 50%, var(--USAFA-blue) 100%);
+  background-image: linear-gradient(90deg,var(--Almond) 0%, var(--Almond2) 3%, var(--Blue-Munsell) 50%, var(--USAFA-blue) 100%);
 }
 
 #header.header-scrolled a{ /*mudar letras, após rolagem*/
@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 33px;
 }
 
 

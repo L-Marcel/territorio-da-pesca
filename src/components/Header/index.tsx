@@ -7,7 +7,8 @@ import getLanguageFile, { langOptions } from '../../util/getLanguageFile';
 
 import ptBrLang from '../../config/language/pt-br';
 
-import nomeImg from '../../assets/img/logo.png';
+import logoImg from '../../assets/img/logo.png';
+import logoWhiteImg from '../../assets/img/logo-white.png';
 
 export interface LangProps {
     type: "Lang",
@@ -53,7 +54,11 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
     return(
         <header id="header" className={!startScrolled? `fixed-top`:`fixed-top header-scrolled`}>
             <div className="container d-flex align-items-center justify-space-between">
-                <h1 className="logo mr-auto"><img src={nomeImg}></img></h1>
+                <h1 className="logo mr-auto">
+                    <img 
+                        src={logoWhiteImg}
+                    ></img>
+                </h1>
                 <div className="nav-menu-container">
                     <nav className="nav-menu d-none d-lg-block">
                         <ul>
@@ -79,7 +84,8 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
 
                                             return(
                                                 <li key={index}>
-                                                    <Link 
+                                                    <Link
+                                                        className="dropdown-buttons"
                                                         to={newRoute} 
                                                         onClick={() => { setLang(value) }}
                                                     >
@@ -96,7 +102,7 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
                                             }
                                             
                                             return(
-                                                <li key={index} className="drop-down"><Link to={newRoute}>{item.name}</Link>
+                                                <li key={index} className="drop-down"><Link className="dropdown-buttons" to={newRoute}>{item.name}</Link>
                                                     <ul>
                                                         { item.options.map(function(item, index){
                                                             const value = getLanguageFile(item.param);
@@ -109,6 +115,7 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
                                                             return(
                                                                 <li key={index}>
                                                                     <Link 
+                                                                        className="dropdown-buttons"
                                                                         to={newRoute}
                                                                         onClick={() => { setLang(value) }}
                                                                     >
@@ -124,9 +131,13 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
                                     }) }
                                 </ul>
                             </li>
+                            <li className={lang.json.headerButton.route === history.location.pathname? "active":""}>
+                                <Link to={lang.json.headerButton.route}>
+                                    {lang.json.headerButton.name}
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
-                    <Link to={lang.json.headerButton.route} className="get-started-btn scrollto">{lang.json.headerButton.name}</Link>
                 </div>
             </div>
         </header>

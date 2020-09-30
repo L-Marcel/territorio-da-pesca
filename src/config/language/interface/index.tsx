@@ -20,6 +20,7 @@ export default interface LangFileProps {
         }[],
         content: SimpleContentPage,
     },
+    historyPage: SimpleContentPage,
     notFound: {
         title: string,
         subtitle: string,

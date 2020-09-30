@@ -1,5 +1,4 @@
 :root {
-    
     --main-color-alt: #2d727ea1;
     --secondary-color: #3a8491;
     --simples-primary-color: #ee9293;
@@ -79,12 +78,12 @@ background: var(--USAFA-blue);
 .leaflet-map-container {
     display: flex;
     flex-direction: row;
-    margin-top: 66px;
+    margin-top: 4rem;
 }
 
 .leaflet-map {
     width: 100%;
-    height: 80vh;
+    height: 81vh;
 }
 
 .leaflet-map-menu {
@@ -104,7 +103,7 @@ background: var(--USAFA-blue);
 .leaflet-map-menu .wrapper svg {
     position: absolute; 
     margin-left: 3.35rem;
-    margin-top: 1.05rem;
+    margin-top: 1.45rem;
     pointer-events: none;
 }
 
@@ -113,7 +112,7 @@ background: var(--USAFA-blue);
     padding-left: 2.5rem;
     border-radius: 4px;
     margin-left: 2.9rem;
-    margin-top: 0.6rem;
+    margin-top: 1rem;
     width: 20rem;
     height: 2.5rem;
     font-size: 1.3rem;
@@ -135,15 +134,16 @@ background: var(--USAFA-blue);
 }
 
 .filter-button-container {
-    margin-top: 23rem;
+    margin-top: 0.7rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 10rem;
 }
 
 .filter-button {
     border-radius: 4px;
-    margin-left: 0.7rem;
+    margin-top: 0.7rem;
+    margin-left: 0.6rem;
     display: flex;
     flex-direction: row;
     text-decoration: none;
@@ -213,22 +213,46 @@ background: var(--USAFA-blue);
     outline-style: none;
 }
 
-@media (max-width: 992px) {
-    .leaflet-map {
-        width: 100%;
-        height: 78vh;
-    }
-    
-    .leaflet-map-container {
-        display: flex;
-        flex-direction: column;
+@media (max-width: 992px) and (orientation: portrait) {
+    .mobile-nav-toggle {
+        top: 0.5rem;
+        font-size: 2rem;
     }
 
-    .leaflet-map-menu {
+    .leaflet-map {
+        width: 100%;
+        height: 75vh;
+    }
+
+    .leaflet-map-container {
+        margin-top: 7.8vh;
+    }
+
+    .pointPage #header {
+        max-height: 7.8vh !important;
+        padding: 1.4vh !important;
+        transition: height .5s;
+    }
+
+    .pointPage #header {
+        padding-left: 0;
+    }
+
+    .pointPage #footer {
+        height: 100%;
+    }
+
+    .pointPage #header .logo img {
+        max-height: 5vh;
+    }
+  
+    .pointPage .py-4 {
+        padding: 0 !important;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        height: 10vh;
+        height: 17.2vh;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -255,7 +279,6 @@ background: var(--USAFA-blue);
     background-color: transparent !important;
     border-color: var(--Green-blue-crayola) !important;
     color: var(--Blue-Munsell) !important;
-    
 }
 
 #header .get-started-btn{
@@ -269,11 +292,13 @@ background: var(--USAFA-blue);
     border-color: var(--Grullo) !important;
     color: var(--white-color) !important;
 }
+
 #header.header-scrolled .get-started-btn { /*cor do botão apos rolagem*/
     background-color: var(--Green-blue-crayola) !important;
     border-color: var(--USAFA-blue) !important;
     color: var(--white-color) !important;
 }
+
 #header.header-scrolled .get-started-btn:hover { /*cor do botão apos rolagem*/
     background-color: var(--Almond2) !important;
     border-color: var(--USAFA-blue) !important;
@@ -300,8 +325,12 @@ background: var(--USAFA-blue);
 .leaflet-div-icon {
     background: transparent;
     border: none;
-}  
+} 
 
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a.dropdown-buttons {
+    border-bottom: 0px !important;
+}
+  
 @keyframes expandButtonMap {
     0% {
         font-size: 0;
@@ -311,3 +340,4 @@ background: var(--USAFA-blue);
         font-size: 0;
     }
 }
+

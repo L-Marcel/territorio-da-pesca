@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom';
 import Home from '../pages/Home';
 import PointsMap from '../pages/PointsMap';
 import NotFound from '../pages/NotFound';
+import HistoryPage from '../pages/History';
 
 const Router = () => {
     return(
@@ -11,6 +12,7 @@ const Router = () => {
             <span id="page-top"/>
             <Switch>
                 <Route path="/:lan/home" exact component={Home}/>
+                <Route path="/:lan/history" exact component={HistoryPage}/>
                 <Route path="/:lan/map" exact component={PointsMap}/>
 
                 <Redirect path="/" exact to="/pt-br/home"/>
