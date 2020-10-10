@@ -20,7 +20,15 @@ export default interface LangFileProps {
         }[],
         content: SimpleContentPage,
     },
-    historyPage: SimpleContentPage,
+    historyPage: {
+        title: string,
+        subtitle: string,
+        button: {
+            text: string,
+            route: string
+        }[],
+        content: SimpleContentPage,
+    },
     notFound: {
         title: string,
         subtitle: string,
@@ -30,12 +38,14 @@ export default interface LangFileProps {
 export type SimpleContentPage = (TextProps | ImagesProps | TextAndButtonProps | null)[];
 
 interface TextProps {
+    idName?: string,
     type: "Text",
     title: string,
     subtitle: string
 };
 
 interface ImagesProps {
+    idName?: string,
     type: "Images",
     title?: string;
     subtitle?: string;

@@ -330,6 +330,25 @@ background: var(--USAFA-blue);
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a.dropdown-buttons {
     border-bottom: 0px !important;
 }
+
+.section-half {
+    height: 60vh !important;
+}
+
+@media (max-width: 992px) and (orientation: portrait) {
+    .section-half {
+        height: 80vh !important;
+    }
+}
+
+.nav-menu .active > a {
+    color: var(--Almond2);
+}
+
+p {
+    white-space: pre-wrap !important;
+    text-align: justify;
+} 
   
 @keyframes expandButtonMap {
     0% {

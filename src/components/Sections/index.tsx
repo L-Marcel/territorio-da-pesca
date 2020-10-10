@@ -10,7 +10,7 @@ interface SectionsProps {
 const Sections: React.FC<SectionsProps> = ({ content, withMarginTop }) => {
     const Page = content.map(function(item, index){
 
-        let haveMarginTop = false;
+        let haveMarginTop = withMarginTop;
 
         if(withMarginTop === undefined && index === 0){
             haveMarginTop = true;
@@ -21,7 +21,7 @@ const Sections: React.FC<SectionsProps> = ({ content, withMarginTop }) => {
         switch(item?.type){
             case("Text"):
                 return(
-                    <section key={index} className={bgColor}>
+                    <section id={item.idName} key={index} className={bgColor}>
                         <div className="container aos-init aos-animate" data-aos="fade-up">
                             <div className="section-title">
                                 <h2>{item.title}</h2>

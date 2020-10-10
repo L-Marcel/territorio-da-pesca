@@ -64,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
                         <ul>
                             { lang.json.header.map(function(item, index){
                                 return(
-                                    <li key={index} className={item.route === history.location.pathname? "active":""}>
+                                    <li key={index} className={item.route === history.location.pathname.split('#')[0]? "active":""}>
                                         <Link to={item.route}>
                                             {item.name}
                                         </Link>

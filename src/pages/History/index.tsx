@@ -23,7 +23,24 @@ const HistoryPage = () => {
         <>  
             <Header language={lang} onChangeLanguage={(json) => {setContent(json)}}/>
             <div id="page">
-                <Sections content={content.home.content} withMarginTop={true}/>
+                <section id="hero" className="d-flex align-items-center section-half">
+
+                    <div className="container" data-aos="zoom-out" data-aos-delay="100">
+                    <div className="row">
+                        <div className="col-xl-6">
+                            <h1>{content.historyPage.title}</h1>
+                            <h2 className="margin-bottom">{content.historyPage.subtitle}</h2>
+                            { content.historyPage.button.map(function(item, index){
+                                return(
+                                    <Link key={index} to={item.route} className="btn-get-started alt-bg-color button-home scrollto">{item.text}</Link>
+                                );
+                            }) }
+                        </div>
+                    </div>
+                    </div>
+
+                </section>
+                <Sections content={content.historyPage.content} withMarginTop={false}/>
                 <Footer/>
             </div>
         </>
