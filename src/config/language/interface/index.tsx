@@ -11,31 +11,28 @@ export default interface LangFileProps {
         name: string,
         isActive: boolean
     }[],
-    home: {
-        title: string,
-        subtitle: string,
-        button: {
-            text: string,
-            route: string
-        }[],
-        content: SimpleContentPage,
-    },
-    historyPage: {
-        title: string,
-        subtitle: string,
-        button: {
-            text: string,
-            route: string
-        }[],
-        content: SimpleContentPage,
-    },
+    home: Page,
+    historyPage: Page,
+    economyPage: Page,
+    environmentPage: Page,
+    routesPage: Page,
     notFound: {
         title: string,
         subtitle: string,
+        content: SimpleContentPage,
     }
 };
 
 export type SimpleContentPage = (TextProps | ImagesProps | TextAndButtonProps | null)[];
+export type Page = {
+    title: string,
+    subtitle: string,
+    button: {
+        text: string,
+        route: string
+    }[],
+    content: SimpleContentPage,
+};
 
 interface TextProps {
     idName?: string,

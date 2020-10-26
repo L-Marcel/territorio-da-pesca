@@ -65,7 +65,9 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
                             { lang.json.header.map(function(item, index){
                                 return(
                                     <li key={index} className={item.route === history.location.pathname.split('#')[0]? "active":""}>
-                                        <Link to={item.route}>
+                                        <Link to={item.route} onClick={() => {
+                                            window.scrollTo(0, 0);
+                                        }}>
                                             {item.name}
                                         </Link>
                                     </li>

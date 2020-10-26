@@ -332,7 +332,7 @@ background: var(--USAFA-blue);
 }
 
 .section-half {
-    height: 60vh !important;
+    height: 70vh !important;
 }
 
 @media (max-width: 992px) and (orientation: portrait) {
@@ -359,4 +359,3 @@ p {
         font-size: 0;
     }
 }
-

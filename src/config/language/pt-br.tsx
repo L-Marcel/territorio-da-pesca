@@ -13,8 +13,12 @@ const ptBrLang: LangFileProps = {
             route: "/pt-br/history"
         },
         {
-            name: "Projetos",
-            route: "/pt-br/projects"
+            name: "Economia",
+            route: "/pt-br/economy"
+        },
+        {
+            name: "Meio Ambiente",
+            route: "/pt-br/environment"
         },
         {
             name: "Trilhas e Turismo",
@@ -186,9 +190,60 @@ const ptBrLang: LangFileProps = {
             },
         ]
     },
+    economyPage: {
+        title: "ECONOMIA",
+        subtitle: "DA RESERVA DE DESENVOLVIMENTO SUSTENTÁVEL PONTA DO TUBARÃO (RDSPT)",
+        button: [
+            
+        ],
+        content: [
+            {
+                idName: "rdspt",
+                type: "Text",
+                title: "EXEMPLO",
+                subtitle: "\tA Reserva de Desenlvolvimento Sustentável Ponta do Tubarão é um espaço geográfico que tem como objetivo preservar diferentes espécies animais e vegetais da intervenção de indivíduos com finalidades destrutivas. Porém, isso não significa que não há lugar para a vida humana, afinal, esse ambiente grande e rico de belezas naturais irá te acolher de braços abertos, contanto que respeite as regras do convivio com a natureza.",
+            },
+        ]
+    },
+    environmentPage: {
+        title: "MEIO AMBIENTE",
+        subtitle: "DA RESERVA DE DESENVOLVIMENTO SUSTENTÁVEL PONTA DO TUBARÃO (RDSPT)",
+        button: [
+        ],
+        content: [
+            {
+                idName: "rdspt",
+                type: "Text",
+                title: "EXEMPLO",
+                subtitle: "\tA Reserva de Desenlvolvimento Sustentável Ponta do Tubarão é um espaço geográfico que tem como objetivo preservar diferentes espécies animais e vegetais da intervenção de indivíduos com finalidades destrutivas. Porém, isso não significa que não há lugar para a vida humana, afinal, esse ambiente grande e rico de belezas naturais irá te acolher de braços abertos, contanto que respeite as regras do convivio com a natureza.",
+            },
+        ]
+    },
+    routesPage: {
+        title: "TRILHAS E TURISMO",
+        subtitle: "DA RESERVA DE DESENVOLVIMENTO SUSTENTÁVEL PONTA DO TUBARÃO (RDSPT)",
+        button: [
+        ],
+        content: [
+            {
+                idName: "rdspt",
+                type: "Text",
+                title: "EXEMPLO",
+                subtitle: "\tA Reserva de Desenlvolvimento Sustentável Ponta do Tubarão é um espaço geográfico que tem como objetivo preservar diferentes espécies animais e vegetais da intervenção de indivíduos com finalidades destrutivas. Porém, isso não significa que não há lugar para a vida humana, afinal, esse ambiente grande e rico de belezas naturais irá te acolher de braços abertos, contanto que respeite as regras do convivio com a natureza.",
+            }
+        ]
+    },
     notFound: {
         title: "ERRO 404",
         subtitle: "Desculpa, não encontramos a página que você está procurando.",
+        content: [
+            {
+                idName: "rdspt",
+                type: "Text",
+                title: "Que desastre!!!",
+                subtitle: "\tPedimos desculpas pelo incoveniente, se o problema persistir, não exite em entrar em contato conosco atravez das redes sociais. Esperamos que isso não volte a acontecer!",
+            },
+        ]
     }
 }
 

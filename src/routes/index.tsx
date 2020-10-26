@@ -4,7 +4,10 @@ import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom';
 import Home from '../pages/Home';
 import PointsMap from '../pages/PointsMap';
 import NotFound from '../pages/NotFound';
-import HistoryPage from '../pages/History';
+import HistoryPage from '../pages/HistoryPage';
+import EconomyPage from '../pages/EconomyPage';
+import EnvironmentPage from '../pages/EnvironmentPage';
+import RoutesPage from '../pages/RoutesPage';
 
 const Router = () => {
     return(
@@ -13,6 +16,9 @@ const Router = () => {
             <Switch>
                 <Route path="/:lan/home" exact component={Home}/>
                 <Route path="/:lan/history" exact component={HistoryPage}/>
+                <Route path="/:lan/economy" exact component={EconomyPage}/>
+                <Route path="/:lan/environment" exact component={EnvironmentPage}/>
+                <Route path="/:lan/routes" exact component={RoutesPage}/>
                 <Route path="/:lan/map" exact component={PointsMap}/>
 
                 <Redirect path="/" exact to="/pt-br/home"/>

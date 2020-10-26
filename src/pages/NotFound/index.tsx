@@ -9,6 +9,7 @@ import ptBrLang from '../../config/language/pt-br';
 import getRouteParamOfPath from '../../util/getRouteParamOfPath';
 
 import LangFileProps from '../../config/language/interface';
+import Sections from '../../components/Sections';
 
 const NotFound = () => {
     //Carregar pacote de linguagem
@@ -22,7 +23,7 @@ const NotFound = () => {
         <>  
             <Header language={lang} onChangeLanguage={(json) => { setContent(json) }}/>
             <div id="page">
-            <section id="hero" className="d-flex align-items-center">
+            <section id="hero" className="d-flex align-items-center section-half">
 
                 <div className="container" data-aos="zoom-out" data-aos-delay="100">
                     <div className="row">
@@ -34,7 +35,8 @@ const NotFound = () => {
                 </div>
 
             </section>
-                <Footer/>
+            <Sections content={content.notFound.content} withMarginTop={false}/>
+            <Footer/>
             </div>
         </>
     );
