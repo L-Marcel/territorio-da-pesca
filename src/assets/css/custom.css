@@ -215,7 +215,7 @@ background: var(--USAFA-blue);
 
 @media (max-width: 992px) and (orientation: portrait) {
     .mobile-nav-toggle {
-        top: 0.5rem;
+        top: 0.8rem;
         font-size: 2rem;
     }
 
@@ -229,12 +229,9 @@ background: var(--USAFA-blue);
     }
 
     .pointPage #header {
-        max-height: 7.8vh !important;
+        max-height: 9.75vh !important;
         padding: 1.4vh !important;
         transition: height .5s;
-    }
-
-    .pointPage #header {
         padding-left: 0;
     }
 
@@ -253,6 +250,39 @@ background: var(--USAFA-blue);
         height: 17.2vh;
         justify-content: center;
         align-items: center;
+    }
+
+    .pointPage .container {
+        padding-top: 5px;
+    }
+
+    .leaflet-map-menu input {
+        margin-left: 3.9rem;
+        margin-top: 1.5rem;
+    }
+
+    .leaflet-map-menu input:hover {
+        margin-left: 3.9rem;
+        margin-top: 1.5rem;
+        width: 15rem;
+    }
+
+    .leaflet-map-menu .wrapper svg {
+        margin-left: 4.35rem;
+        margin-top: 1.95rem;
+    }
+
+    .filter-button {
+        padding: 7px;
+    }
+
+    .filter-button:hover div {
+        display: none;
+    }
+
+    .filter-button:hover {
+        justify-content: left;
+        width: 2.5rem;
     }
 }
 
@@ -337,12 +367,65 @@ background: var(--USAFA-blue);
 
 @media (max-width: 992px) and (orientation: portrait) {
     .section-half {
-        height: 80vh !important;
+        height: 40rem !important;
+    }
+
+    #hero .btn-get-started {
+        font-size: 14px;
+        padding: 8px 18px;
+        margin-right: 8px;
+        border-radius: 4px;
+        transition: 0.5s;
+        margin-top: 0.4rem;
+        color: var(--Blue-Munsell);
+        background-color: var(--crayola-amarela);
+        border: 2px solid var(--vermelho-amarelo-max);
+    }
+
+    #hero h2 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    #hero h1 {
+        font-size: 26px;
     }
 }
 
 .nav-menu .active > a {
     color: var(--Almond2);
+}
+
+.section-bg {
+    color: white;
+}
+
+.mobile-nav {
+    background-color: white;
+}
+
+.mobile-nav * {
+    color: var(--USAFA-blue) !important;
+}
+
+.back-to-top i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background: white;
+    color: var(--Grullo);
+    border: 1px var(--Grullo) solid;
+    transition: all 0.4s;
+}
+
+.back-to-top i:hover {
+    background: white;
+    color: var(--USAFA-blue);
+    border: 1px var(--USAFA-blue) solid;
 }
 
 p {
