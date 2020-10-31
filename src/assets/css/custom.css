@@ -267,6 +267,12 @@ background: var(--USAFA-blue);
         width: 15rem;
     }
 
+    .leaflet-map-menu input:focus {
+        margin-left: 3.9rem;
+        margin-top: 1.5rem;
+        width: 15rem;
+    }
+
     .leaflet-map-menu .wrapper svg {
         margin-left: 4.35rem;
         margin-top: 1.95rem;
