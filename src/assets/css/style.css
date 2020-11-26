@@ -414,7 +414,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.25);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -455,8 +455,7 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent; /*mudar em custom*/
   border-color: var(--USAFA-blue);
   color: var(--white-color);
-  opacity: 10;
-  
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -526,7 +525,7 @@ section {
 
 .section-bg:before {
   content: "";
-  background: var(--Grullo); /*listra com o conteudo*/
+  background-image: linear-gradient(89deg,var(--Almond2) 0%, var(--Blue-Munsell) 10%, var(--USAFA-blue) 100%);
   position: absolute;
   bottom: 60px;
   top: 60px;

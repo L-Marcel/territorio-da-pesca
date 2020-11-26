@@ -39,8 +39,7 @@
     --Almond: #e0d3c3;
     --Almond2: #dacabb;
     --Pale-Silver: #c3b9ad;
-    --Grullo: #ad9879;
-    
+    --Grullo: #c2a06c;
 }
 
 ::-webkit-scrollbar {
@@ -57,6 +56,10 @@ background: var(--Green-blue-crayola);
 
 ::-webkit-scrollbar-thumb:hover {
 background: var(--USAFA-blue);
+}
+
+#hero {
+    background-position-y: 0rem;
 }
 
 .first-item-of-page {
@@ -305,16 +308,17 @@ background: var(--USAFA-blue);
 }
 
 .button-home {
-    background-color: transparent !important;
-    border-color: var(--Grullo) !important;
-    color: var(--Grullo) !important;
+    background-color: rgba(0,0,0,0.55) !important;
+    border-color: var(--Blue-Munsell) !important;
+    color: var(--Blue-Munsell) !important;
+    font-weight: 700 !important;
     border-radius: 5px !important;
 }
 
 .button-home:hover {
-    background-color: transparent !important;
+    background-color: rgba(0,0,0,0.55) !important;
     border-color: var(--Green-blue-crayola) !important;
-    color: var(--Blue-Munsell) !important;
+    color: var(--Green-blue-crayola) !important;
 }
 
 #header .get-started-btn{

@@ -23,7 +23,7 @@ export default interface LangFileProps {
     }
 };
 
-export type SimpleContentPage = (TextProps | ImagesProps | TextAndButtonProps | null)[];
+export type SimpleContentPage = (TextProps | ImagesProps | TextAndButtonProps | TextWithReportsProps | null)[];
 export type Page = {
     title: string,
     subtitle: string,
@@ -48,8 +48,9 @@ interface ImagesProps {
     subtitle?: string;
     images: {
         src: string;
-        filter: string;
-        title: string;
+        filter?: string;
+        title?: string;
+        haveLink?: boolean;
     }[];
 }
 
@@ -61,4 +62,15 @@ interface TextAndButtonProps {
         text: string,
         route: string
     }
+};
+
+interface TextWithReportsProps {
+    idName?: string,
+    type: "TextWithReports",
+    title: string,
+    subtitle: string,
+    content: {
+        title: string,
+        subtitle: string;
+    }[];
 };

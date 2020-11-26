@@ -1,6 +1,13 @@
 import LangFileProps from './interface';
 
-import imgExemplo from '../../assets/img/portfolio/portfolio-1.jpg';
+import imgExemplo from '../../assets/img/content/artesanato_1.jpg';
+
+import imgArtesanato1 from '../../assets/img/content/artesanato_1.jpg';
+import imgArtesanato2 from '../../assets/img/content/artesanato_2.jpg';
+import imgArtesanato3 from '../../assets/img/content/artesanato_3.jpg';
+import imgArtesanato4 from '../../assets/img/content/artesanato_4.jpg';
+import imgArtesanato5 from '../../assets/img/content/artesanato_5.jpg';
+import imgArtesanato6 from '../../assets/img/content/artesanato_6.jpg';
 
 const ptBrLang: LangFileProps = {
     header: [
@@ -194,15 +201,103 @@ const ptBrLang: LangFileProps = {
         title: "ECONOMIA",
         subtitle: "DA RESERVA DE DESENVOLVIMENTO SUSTENTÁVEL PONTA DO TUBARÃO (RDSPT)",
         button: [
-            
+            {   
+                text: "Principais eixos",
+                route: "#rdspt"
+            },
+            {   
+                text: "Pesca artesanal",
+                route: "#pesca"
+            },
+            {   
+                text: "Artesanato",
+                route: "#artesanato"
+            },
+            {
+                text: "Relatos",
+                route: "#relatos"
+            },
+            {
+                text: "Importância da RDSPT",
+                route: "#importancia"
+            }
         ],
         content: [
             {
                 idName: "rdspt",
                 type: "Text",
-                title: "EXEMPLO",
-                subtitle: "\tA Reserva de Desenlvolvimento Sustentável Ponta do Tubarão é um espaço geográfico que tem como objetivo preservar diferentes espécies animais e vegetais da intervenção de indivíduos com finalidades destrutivas. Porém, isso não significa que não há lugar para a vida humana, afinal, esse ambiente grande e rico de belezas naturais irá te acolher de braços abertos, contanto que respeite as regras do convivio com a natureza.",
+                title: "Principais eixos",
+                subtitle: "\tDiogo Lopes fica localizado entre as comunidades de Barreiras e Sertãozinho, que fazem parte de uma reserva ambiental chamada Reserva de Desenvolvimento Sustentável Estadual Ponta do Tubarão com 12.960 ha. de extensão. Seu trabalho e economia consistem basicamente em dois eixos principais: o primeiro eixo é a pesca artesanal, que é a principal atividade econômica, e o segundo a produção de artesanatos. Ambas são de extrema importância econômica para a Reserva e para o estado, uma vez que o local é o que mais produz pescados se comparado às cidades vizinhas.\n\n\tToda a produção é destinada para o comércio local e para a capital do estado.",
+            },{
+                idName: "pesca",
+                type: "Text",
+                title: "Pesca artesanal",
+                subtitle: "\tNesse tipo de pesca encontramos apenas barcos de pequeno porte, ou, em alguns casos, nenhum, pois sua principal característica é o uso de praticas manuais. Em síntese, esse tipo de pesca é uma das principais rendas de muitas famílias que vivem da pesca hoje em dia no Brasil.\n\n\tDiferente da pesca industrial, as ferramentas utilizadas são bastante limitadas."
             },
+            {
+                idName: "artesanato",
+                type: "Images",
+                title: "Artesanato",
+                subtitle: "\tA produção dos objetos artesanais é feita a partir de materiais vindos da própria natureza, como pedaços de madeira e até mesmo folhas de coqueiros. Essa prática se torna um meio de renda extra para os moradores, pois esses objetos são vendidos para visitantes que querem levar uma “lembrancinha” da reserva.",
+                images: [
+                    {
+                        src: imgArtesanato1,
+                        filter: "Produtos artesanais",
+                        title: "Artesanato"
+                    },
+                    {
+                        src: imgArtesanato2,
+                        filter: "Produtos artesanais",
+                        title: "Artesanato"
+                    },
+                    {
+                        src: imgArtesanato3,
+                        filter: "Produtos artesanais",
+                        title: "Artesanato"
+                    },
+                    {
+                        src: imgArtesanato4,
+                        filter: "Produtos artesanais",
+                        title: "Artesanato"
+                    },
+                    {
+                        src: imgArtesanato5,
+                        filter: "Produtos artesanais",
+                        title: "Artesanato"
+                    },
+                    {
+                        src: imgArtesanato6,
+                        filter: "Produtos artesanais",
+                        title: "Artesanato"
+                    }
+                ]
+            },
+            {
+                idName: "relatos",
+                type: "TextWithReports",
+                title: "Relatos",
+                subtitle: "\tCom base no surgimento da RDS, moradores do distrito relataram quais impactos positivos e negativos foram e são causados até hoje na economia, no espaço ambiental, cultural e na organização social.",
+                content: [
+                    {
+                        title: "Primeiro morador",
+                        subtitle: "\tPontos positivos: Houve um grande crescimento populacional e territorial na região, com melhorias nas estruturas físicas do distrito, mantendo intacta a essência e importância histórica das construções e, além disso, com o mínimo de agressão à natureza. Houve também implantação de projetos sociais, econômicos e culturais, os quais são promovidos por empresas que têm interesses ou deveres na reserva. Esses projetos ajudam a manter os costumes culturais da região, a alavancar a economia e a facilitar a vida dos moradores, em especial dos pescadores.\n\n\tPontos negativos: O distrito sofre com a falta de segurança, porém não é um dos maiores problemas que se enfrenta. Por ser um distrito pequeno no litoral, a região depende muito da pesca e de um possível turismo. Porém, nem sempre a pesca traz bons lucros e o turismo não é tão explorado na região. Isso pode ser pelo fato de o distrito depender muito das condições políticas de sua cidade, Macau, que quando não está em boas condições abandona o distrito e o deixa caindo aos pedaços, o que leva ao desinteresse de turistas na região.\n\n\tImportância local: Não só Diogo Lopes, mas toda a área que abrange a reserva tem grande importância pois é uma das poucas regiões que garante a preservação de várias áreas da natureza, da fauna à flora e do manguezal à caatinga. Sem contar a sua participação na economia, já que a região está entre os maiores produtores de pescado do estado."
+                    },
+                    {
+                        title: "Segundo morador",
+                        subtitle: "\tPontos positivos: Houve melhorias na saúde e na educação e na estrutura física da cidade, além de expansão territorial e aumento populacional, sem contar os projetos sociais com foco em privilegiar os pescadores de empresas atraídas pela reserva. \n\n\tPontos negativos: Com o tempo, houve uma queda na segurança pública local e sucateamento de alguns pontos físicos da cidade, seguido de uma alta no desemprego.\n\n\tImportância local: Mesmo com a queda na segurança pública, é um lugar calmo e tranquilo para morar, sem contar a ajuda na renda e as oportunidades oferecidas pela natureza no local."
+                    },
+                    {
+                        title: "Terceiro morador",
+                        subtitle: "\tPontos positivos: As ruas do local melhoraram com o tempo, houve uma melhoria na pesca, com materiais para facilitar a captura e incentivos sociais por parte dos órgãos públicos.\n\n\tPontos negativos: A quantidade de empregos diminuiu, o que obrigou alguns moradores a saírem da região em busca de emprego.\n\n\tImportância local: Conservação dos costumes festeiros da região."
+                    }
+                ],
+            },
+            {
+                idName: "importancia",
+                type: "Text",
+                title: "Importância da RDSPT",
+                subtitle: "\tÉ notória a importância da Reserva Ponta do Tubarão de desenvolvimento sustentável, que busca manter, principalmente, a biodiversidade do local, além de conseguir assegurar as condições e os meios necessários para a melhoria da qualidade de vida da população que ali residem, considerando que a principal fonte de renda vem da pesca e os lugares de extração são os mangues, o estuário e o próprio mar. Logo, a principal importância cultural para o estado é a preservação do meio ambiente e o modo de vida simples que mantém a atividade pesqueira local como uma cultura levada a sério até os dias atuais. O hábito e o entendimento local da comunidade mudaram, interferindo diretamente em sua cultura e economia."
+            }
         ]
     },
     environmentPage: {

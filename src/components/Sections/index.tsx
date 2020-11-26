@@ -47,11 +47,11 @@ const Sections: React.FC<SectionsProps> = ({ content, withMarginTop }) => {
                                             <div className="portfolio-wrap">
                                             <img src={item.src} className="img-fluid" alt=""/>
                                             <div className="portfolio-info">
-                                                <h4>{item.title}</h4>
-                                                <p>{item.filter}</p>
+                                                { item.title? <h4>{item.title}</h4>:null }
+                                                { item.filter? <p>{item.filter}</p>:null }
                                                 <div className="portfolio-links">
-                                                    <Link to={item.src} data-gall="portfolioGallery" className="venobox vbox-item"><i className="bx bx-plus"></i></Link>
-                                                    <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
+                                                    <Link to={item.src} data-gall="contentGallery" className="venobox vbox-item"><i className="bx bx-plus"></i></Link>
+                                                    { item.haveLink? <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>:null }
                                                 </div>
                                             </div>
                                             </div>
@@ -59,6 +59,25 @@ const Sections: React.FC<SectionsProps> = ({ content, withMarginTop }) => {
                                     );
                                 })}
                             </div>
+                        </div>
+                    </section>
+                );
+            case("TextWithReports"):
+                return(
+                    <section id={item.idName} key={index} className={bgColor}>
+                        <div className="container aos-init aos-animate" data-aos="fade-up">
+                            <div className="section-title">
+                                <h2>{item.title}</h2>
+                                <p>{item.subtitle}</p>
+                            </div>
+                            {item.content.map(function(report, index){
+                                return(
+                                    <div key={index} className="section-title">
+                                        <h3>{report.title}</h3>
+                                        <p>{report.subtitle}</p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </section>
                 );
