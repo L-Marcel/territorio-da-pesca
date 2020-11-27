@@ -66,18 +66,37 @@ const Sections: React.FC<SectionsProps> = ({ content, withMarginTop }) => {
                 return(
                     <section id={item.idName} key={index} className={bgColor}>
                         <div className="container aos-init aos-animate" data-aos="fade-up">
-                            <div className="section-title">
+                            <div className="section-title" style={{ paddingBottom: item.subtitle? "30px":0 }}>
                                 <h2>{item.title}</h2>
-                                <p>{item.subtitle}</p>
+                                { item.subtitle? <p>{item.subtitle}</p>:null }
                             </div>
                             {item.content.map(function(report, index){
-                                return(
-                                    <div key={index} className="section-title">
-                                        <h3>{report.title}</h3>
-                                        <p>{report.subtitle}</p>
-                                    </div>
-                                );
-                            })}
+                                    return(
+                                        <div key={index} className="section-title">
+                                            <h3>{report.title}</h3>
+                                            <p>{report.subtitle}</p>
+                                        </div>
+                                    );
+                                })}
+                                <div className="row portfolio aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                                    { item.images? item.images.map(function(item, index) {
+                                        return(
+                                            <div className={`col-lg-4 col-md-6 portfolio-item filter-${item.filter}`}>
+                                                <div className="portfolio-wrap">
+                                                <img src={item.src} className="img-fluid" alt=""/>
+                                                <div className="portfolio-info">
+                                                    { item.title? <h4>{item.title}</h4>:null }
+                                                    { item.filter? <p>{item.filter}</p>:null }
+                                                    <div className="portfolio-links">
+                                                        <Link to={item.src} data-gall="contentGallery" className="venobox vbox-item"><i className="bx bx-plus"></i></Link>
+                                                        { item.haveLink? <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>:null }
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        );
+                                    }):null}
+                                </div>
                         </div>
                     </section>
                 );

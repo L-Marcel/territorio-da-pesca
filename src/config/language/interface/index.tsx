@@ -68,9 +68,15 @@ interface TextWithReportsProps {
     idName?: string,
     type: "TextWithReports",
     title: string,
-    subtitle: string,
+    subtitle?: string,
     content: {
         title: string,
         subtitle: string;
+    }[];
+    images?: {
+        src: string;
+        filter?: string;
+        title?: string;
+        haveLink?: boolean;
     }[];
 };

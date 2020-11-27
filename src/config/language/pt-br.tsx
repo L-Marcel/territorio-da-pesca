@@ -304,28 +304,147 @@ const ptBrLang: LangFileProps = {
         title: "MEIO AMBIENTE",
         subtitle: "DA RESERVA DE DESENVOLVIMENTO SUSTENTÁVEL PONTA DO TUBARÃO (RDSPT)",
         button: [
+            {
+                text: "Fauna",
+                route: "#fauna"
+            },
+            {
+                text: "Flora",
+                route: "#flora"
+            }, 
+            {
+                text: "Notas adicionais",
+                route: "#notes"
+            }
         ],
         content: [
             {
-                idName: "rdspt",
+                idName: "fauna",
                 type: "Text",
-                title: "EXEMPLO",
-                subtitle: "\tA Reserva de Desenlvolvimento Sustentável Ponta do Tubarão é um espaço geográfico que tem como objetivo preservar diferentes espécies animais e vegetais da intervenção de indivíduos com finalidades destrutivas. Porém, isso não significa que não há lugar para a vida humana, afinal, esse ambiente grande e rico de belezas naturais irá te acolher de braços abertos, contanto que respeite as regras do convivio com a natureza.",
+                title: "Fauna",
+                subtitle: "\tA fauna da reserva é constituída por abelhas, bico-torto, canário do mangue, cavalo marinho, entre outros. Os peixes constituem uma grande riqueza de diversidade e abundância tanto para a produção como para a reprodução nesse ecossistema. A fauna da reserva é rica por ter vários animais: nos mangues, por exemplo, pode-se encontrar o caranguejo sapateiro, no estuário entre as espécies de peixes pode-se encontrar carapicu, moreia, vermelho, tainha e o cavalo marinho. Nesse estuário, muitas espécies vêm se reproduzir, como a cioba, o dentão e até mesmo a tainha, entre outros. Da beira mar da restinga até dois mil metros da costa está situada a parte de mar da reserva da ponta do tubarão, que fica perto da Beira do mar e abriga espécies como o xaréu, o pescado, a serra, a pururuca e a corvina. Já próximo ao fim da reserva existem outras espécies como a guarajuba, a cioba e o dentão. Esse pedaço de mar é uma riqueza natural para pesquisadores e estudiosos e, com isso, sua preservação deve ser garantida. O estuário é responsável por garantir o sustento de centenas de famílias de baixa renda que retiram sua sobrevivência desses recursos naturais. Além dos peixes, existem muitos mariscos, como o búzio, a ostra, o sururu e a unha de velho, e os crustáceos, a exemplo do caranguejo branco e roxo, camarão, siri entre outros.",
             },
+            {
+                idName: "flora",
+                type: "Text",
+                title: "Flora",
+                subtitle: "\tSua vegetação é formada pelas espécies sapateiro (onde está a produção do caranguejo vermelho e aratu), canoé (onde se produz o caranguejo branco), mangue manso e ratinho. A flora é bastante diversificada, pois a unidade apresenta áreas de manguezal tabuleiros costeiros e fragmentos de Mata Atlântica.\n\n\tAs principais espécies encontradas Ponta do Tubarão são: Opisthonema oglinum (Sardinha), Cheilopogon melanurus (Peixe Voador), Calidris minutilla (Maçariquinho), Tringa semipalmata (Maçarico de asa branca), Molothrus bonarienses (Chupim), Caranx hippos (Xaréu amarelo), Lutjanus analis (Cioba), Diapterus auratus (Carapeba), Lutjanus jocu (Dentão), Scomberomorus brasiliensis (Serra) e Lutjanus alexandrei (Baúna).\n\n\tOs principais problemas ambientais apresentados no local são: esgoto (37,4%), lixo a céu aberto (52,5%) e poluição do rio Tubarão, que é consequência do descarte das vísceras dos peixes pelos pescadores (10,1%).",
+            }, 
+            {
+                idName: "notes",
+                type: "Text",
+                title: "Notas adicionais",
+                subtitle: "\tApesar de 37,4% da poluição ser de origem sanitária, pedimos carecidamente que cada turista contribua com a preservação, não só de Diogo Lopes, como também da reserva como um todo. Para isso, basta jogar o lixo em seu devido lugar e respeitar ao máximo a bela paisagem que este lugar tem a te oferecer."   
+            }
         ]
     },
     routesPage: {
         title: "TRILHAS E TURISMO",
         subtitle: "DA RESERVA DE DESENVOLVIMENTO SUSTENTÁVEL PONTA DO TUBARÃO (RDSPT)",
         button: [
+            {
+                text: "Potencialidades turísticas",
+                route: "#potencialidades"
+            },
+            {
+                text: "Trilhas disponíveis",
+                route: "#pontos"
+            },
+            {
+                text: "Festivais",
+                route: "#festivais"
+            },
+            {
+                text: "Culinária",
+                route: "#culinaria"
+            },
+            {
+                text: "Atividades de pesca",
+                route: "#pesca"
+            },
+            {
+                text: "História do turismo na RDSPT",
+                route: "#historia"
+            }
         ],
         content: [
             {
-                idName: "rdspt",
+                idName: "potencialidades",
                 type: "Text",
-                title: "EXEMPLO",
-                subtitle: "\tA Reserva de Desenlvolvimento Sustentável Ponta do Tubarão é um espaço geográfico que tem como objetivo preservar diferentes espécies animais e vegetais da intervenção de indivíduos com finalidades destrutivas. Porém, isso não significa que não há lugar para a vida humana, afinal, esse ambiente grande e rico de belezas naturais irá te acolher de braços abertos, contanto que respeite as regras do convivio com a natureza.",
-            }
+                title: "Potencialidades turísticas",
+                subtitle: "As principais potencialidades do turismo na Reserva estão ligadas à fauna e à flora da região. As dunas de areia são um ponto muito importante e utilizado para o turismo, os passeios de “buggy” são bem explorados no local e há, ainda, a realização de trilhas que muitas vezes tem como objetivo estudos e projetos. O estuário, braço de mar, por mais que seja algo muito preservado, também é considerado um ponto turístico, além de ser utilizado como lugar para realizar esportes na água. A caatinga também é um ponto turístico da reserva, geralmente usado para observar a natureza, bem como funciona como fonte para estudos."
+            },
+            {
+                idName: "routes",
+                type: "TextWithReports",
+                title: "Trilhas disponíveis",
+                content: [
+                    {
+                        title: "Trilha nas dunas",
+                        subtitle: "\tNessa trilha é possível visualizar algumas espécies da caatinga. Recomenda-se que o percurso seja feito durante o fim da tarde para se contemplar um lindo pôr-do-sol."
+                    },
+                    {
+                        title: "Trilha das falésias",
+                        subtitle: "\tA trilha tem seu início no Chico Martins e vai até a Soledade. Nela, é possível observar os sedimentos e tipos de solos que formam as falésias. Os olheiros de água, a caatinga e o manguezal também são os principais pontos dessa trilha."
+                    },
+                    {
+                        title: "Trilhas aquáticas",
+                        subtitle: "\tSão feitas em barcos de uma rede cidadã solidária da Reserva de Desenvolvimento Sustentável (RSD), que foi criada com o intuito de trazer benefício para comerciantes, marisqueiros e pecadores. Ao fazer as trilhas, os aventureiros contribuem para o \"Turismo Ecológico\" uma vez que elas são feitas em ambientes naturais e preservados. Durante a trilha é possível observar o cotidiano das marisqueiras, a diversidade de mangues e o mar. Para os amantes da tranquilidade, a RDS também possui uma trilha aquática mais tranquila, com a quantidade máxima de 3 pessoas. Essa trilha é realizada nas Gamboas e é feita em uma embarcação de pequeno porte (canoa). Nela, é possível observar e ouvir os barulhos dos animais já que a embarcação não tem barulho de motor. O diferencial fica por conta da vara de remar, que é utilizada durante todo o percurso."
+                    }
+                ],
+            },
+            {
+                idName: "pontos",
+                type: "TextWithReports",
+                title: "Trilhas disponíveis",
+                subtitle: "O turismo é bastante presente em Diogo Lopes, local caracterizado pelas riquezas ambientais, muitas delas até então inexploradas. Lá, o que chama a atenção dos turistas é a beleza de seus pontos turísticos, além de seu povo hospitaleiro. Os pontos turísticos mais frequentados são a praia, a igreja, as dunas, o mangue, o balneário e rancho da Petrobrás.",
+                content: [
+                    {
+                        title: "Igreja",
+                        subtitle: "\tA igreja não atrai apenas religiosos. Sua arquitetura antiga chama atenção de turistas em geral."
+                    },
+                    {
+                        title: "Praia",
+                        subtitle: "\tA praia de Diogo Lopes encanta seus turistas com a sua beleza exuberante, tornando-se um dos pontos turísticos mais visitados."
+                    },
+                    {
+                        title: "Dunas e mangues",
+                        subtitle: "\tAs duas atraem os turistas pela sua beleza natural e os mangues pela oportunidade de conhecer o cultivo de caranguejos."
+                    },
+                    {
+                        title: "Balneário",
+                        subtitle: "\tÉ um local privado onde geralmente as famílias vão aos finais de semana em virtude do lazer disponibilizado para as crianças."
+                    },
+                    {
+                        title: "Rancho da Petrobras",
+                        subtitle: "\tÉ um espaço cultural disponibilizado pela Petrobras para a comunidade promover eventos."
+                    }
+                ],
+            },
+            {
+                idName: "festivais",
+                type: "Text",
+                title: "Festivais",
+                subtitle: "\tOs festivais culturais que acontecem em Diogo Lopes são tradições antigas voltadas inicialmente para a crença religiosa da população, a exemplo da festa das flores, um festejo católico em devoção à padroeira do distrito. Durante desses festejos ocorrem também festivais esportivos que são atrativos para o turismo da região. Nesses festivais esportivos são realizados esportes como a corrida de barcos, nas categorias “a”, “b” e “c”, sendo esses, respectivamente, barco de enfeite, canoas e embarcações pesqueiras; os campeonatos de blocos; e jogos esportivos como, futevôlei, futsal e futebol de areia.\n\n\tOutra tradição cultural do distrito é a famosa balada da regata, referência para o turismo e para a economia. A balada da regata é um evento patrocinado pelo Petrobras em parceria com a prefeitura de Macau e já completou sua 20ª edição. Ela é realizada nos finais de semanas e tem uma programação variada que inclui esportes, competição, apresentações e até premiações para os vencedores.",
+            },
+            {
+                idName: "culinaria",
+                type: "Text",
+                title: "Culinária",
+                subtitle: "\tA culinária de Diogo Lopes é bastante variada quando se trata da pesca em função da variedade dos peixes capturados no local, tais como sardinha, tainha e tilápia. A sardinha, anos atrás, passou a predominar na culinária local por ser considerada, na época, o pescado mais abundante da região. Na ocasião, serviam-se torta de sardinha, pizza de macarrão com sardinha, patê de sardinha, entre outros. Mas, atualmente, a grande quantidade de peixes encontrados em Diogo Lopes aumentou a variedade do cardápio, fazendo com que ova de voador, por exemplo, tenha se tornado um prato típico bastante servido.",
+            },
+            {
+                idName: "pesca",
+                type: "Text",
+                title: "Atividades de pesca",
+                subtitle: "\tOs tipos de pesca predominantes na região são a de subsistência (que visa ao sustento e à sobrevivência familiar local) e a comercial. As atividades de pesca esportiva e recreativa quase não são praticadas em Diogo Lopes.",
+            },
+            {
+                idName: "historia",
+                type: "Text",
+                title: "História do turismo na RDSPT",
+                subtitle: "\tA Reserva de Desenvolvimento Sustentável Ponta do Tubarão (RDSPT), no Rio Grande Norte, está mais fortalecida para o Turismo. Isso é resultado do projeto “Turismo de Base Comunitária na Ponta do Tubarão”, realizado pela Comissão de Justiça e Paz, proposta apoiada pelo 7° edital Costa Atlântica, da Fundação SOS Mata Atlântica. Durante cerca de um ano, o projeto desenvolveu ações para ampliar a capacidade do Grupo de Trabalho de Turismo do Conselho da RDS, articulando o setor hoteleiro, restaurantes e agências de turismo locais, além de ter realizado eventos com artesões da região e ampliado a divulgação da reserva nos roteiros turísticos do Rio Grande do Norte.\n\n\tNo 1° trimestre de 2016, concluiu-se a instalação das placas de sinalização da reserva e, no último mês do mesmo ano, a RDS ganhou um festival com gastronomia, esportes e outras atividades, além de um videoclipe promocional. \n\n\tSegundo o Sistema Nacional de Unidades de Conservação (SNUC), a RDS tem como objetivos proteger o modo de vida das populações tradicionais e assegurar atividades baseadas em um sistema sustentável de exploração de recursos naturais, estas desenvolvidas ao longo de gerações e adaptadas às condições ecológicas locais, desempenhando papel fundamental na proteção da natureza e na manutenção da diversidade biológica.\n\n\tA fauna e a flora da reserva são muito diversificadas, pois estão inseridas em um mosaico de paisagens naturais, tais como manguezal, tabuleiros costeiros, fragmentos de Mata Atlântica, além de praias, rios e lagoas. É possível conhecer todas essas riquezas naturais através de inúmeras trilhas terrestres e aquáticas, com auxílio de guias turísticos nativos.",
+            },
         ]
     },
     notFound: {
