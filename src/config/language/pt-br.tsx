@@ -2,19 +2,28 @@ import LangFileProps from './interface';
 
 import imgExemplo from '../../assets/img/content/artesanato_1.jpg';
 
-import imgArtesanato1 from '../../assets/img/content/artesanato_1.jpg';
-import imgArtesanato2 from '../../assets/img/content/artesanato_2.jpg';
-import imgArtesanato3 from '../../assets/img/content/artesanato_3.jpg';
-import imgArtesanato4 from '../../assets/img/content/artesanato_4.jpg';
-import imgArtesanato5 from '../../assets/img/content/artesanato_5.jpg';
-import imgArtesanato6 from '../../assets/img/content/artesanato_6.jpg';
+import imgProjeto1 from '../../assets/img/content/projeto_1.jpg';
+import imgProjeto2 from '../../assets/img/content/projeto_2.jpg';
+import imgProjeto3 from '../../assets/img/content/projeto_3.jpg';
+
+import imgProjeto4 from '../../assets/img/content/projeto_4.jpg';
+import imgProjeto5 from '../../assets/img/content/projeto_5.jpg';
+import imgProjeto6 from '../../assets/img/content/projeto_6.jpg';
+
+import imgProjeto7 from '../../assets/img/content/projeto_7.jpg';
+import imgProjeto8 from '../../assets/img/content/projeto_8.jpg';
+import imgProjeto9 from '../../assets/img/content/projeto_9.jpg';
+
+import imgProjeto10 from '../../assets/img/content/projeto_10.jpg';
+import imgProjeto11 from '../../assets/img/content/projeto_11.jpg';
+import imgProjeto12 from '../../assets/img/content/projeto_12.jpg';
 
 const ptBrLang: LangFileProps = {
     header: [
         {
             name: "Inicio",
             route: "/pt-br/home"
-        },
+        },/*
         {
             name: "História",
             route: "/pt-br/history"
@@ -30,7 +39,7 @@ const ptBrLang: LangFileProps = {
         {
             name: "Trilhas e Turismo",
             route: "/pt-br/routes"
-        },
+        },*/
     ],
     headerButton: {
         name: "Mapa Completo",
@@ -52,59 +61,113 @@ const ptBrLang: LangFileProps = {
     ],
     home: {
         title: "BEM-VINDO",
-        subtitle: "AO TERRITÓRIO DA PESCA",
+        subtitle: "AO PROJETO DE EXTENSÃO TERRITÓRIOS DA PESCA",
         button: [
             {
-                text: "Nosso objetivo",
-                route: "#objective"
+                text: "Sobre o projeto",
+                route: "#1"
             },
             {
-                text: "Parcerias",
-                route: "#partnerships"
+                text: "Cartografia Social",
+                route: "#2"
             },
-            {
-                text: "Parcerias",
-                route: "#partnerships"
-            },
-            {
-                text: "Parcerias",
-                route: "#partnerships"
-            },
-            {
-                text: "Parcerias",
-                route: "#partnerships"
-            }
         ],
         content: [
             {
+                idName: "1",
                 type: "Text",
-                title: "NOSSO OBJETIVO",
-                subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                title: "Sobre o projeto",
+                subtitle: "\tO projeto, ao longo de seus meses de execução (Maio a Novembro do ano de 2019), pôs em prática com excelência todas as suas metas que visavam contribuir e favorecer a(s) comunidade(s) pesqueira(s) da Reserva de Desenvolvimento Sustentável Estadual Ponta do Tubarão – ‘’RDSEPT’’ em vários aspectos.\n\n\tNesse âmbito, realizou-se algumas atividades que contribuíram para o desenvolvimento da reserva. As principais atividades realizadas foram: a cartografia social, o curso de confecção de rede de pesca, mapeamento de trilhas, associativismo (por meio de reuniões havendo a mobilização da comunidade e de representantes de órgão importantes da ‘’RDSEPT’’), empreendedorismo (fornecido por meio da oficina de cooperativismo com artesãs) e os fortalecimentos de redes institucionais, como irá ser mostrado a seguir."
             },
             {
-                type: "Text",
-                title: "NOSSO OBJETIVO",
-                subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            },
-            {
+                idName: "2",
                 type: "Images",
-                title: "Exemplo de imanges",
-                subtitle: "Exemple",
+                title: "Cartografia Social",
+                subtitle: "\tPrimeiro, houve uma mobilização da comunidade para participar da ação de cartografia social, fazendo o mapeamento dos locais de moradia, lazer, economia e subsistência. Em paralelo, identificou-se as práticas e/ou organizações coletivas já existentes no território, análise da capacidade técnica e associativa dessas práticas e identificação de práticas culinárias e gastronômicas que estavam associadas à pesca artesanal.",
                 images: [
                     {
-                        src: imgExemplo,
-                        filter: "Exemplo",
-                        title: "Exemplo"
+                        src: imgProjeto1,
+                        filter: "Campus Macau com a comunidade da ‘’RDSEPT’’ para haver a mobilização da comunidade e realizar-se a Cartografia Social",
+                        title: "Encontro de professores do IFRN"
                     },
                     {
-                        src: imgExemplo,
-                        filter: "Exemplo",
-                        title: "Exemplo"
+                        src: imgProjeto2,
+                        filter: "Mostra algumas explicações feitas por membros do projeto (Professores de história e geografia) para que em seguida, começasse a produção da Cartografia Social.  ",
+                        title: "Auxilio dos professores"
                     },
                     {
-                        src: imgExemplo,
-                        filter: "Exemplo",
-                        title: "Exemplo"
+                        src: imgProjeto3,
+                        filter: "Mapeamento feito junto com a comunidade para a realização do mapa cartográfico explicativo que está presente no nosso site.",
+                        title: "Interação com a comunidade"
+                    }
+                ]
+            },
+            {
+                idName: "3",
+                type: "Images",
+                title: "CURSO DE CONFECÇÃO DE REDES DE PESCA",
+                subtitle: "\tCada participante recebeu instruções e praticou a confecção tradicional de redes de pesca. Todavia, os primeiros itens produzidos foram peças de artesanato em linha de algodão, como bolsas e utensílios domésticos, evoluindo para apetrechos de pesca em linha de nylon como redes e tarrafa. Como se tratou de uma oficina, os participantes completaram carga horária variando de 24 a 68 horas.",
+                images: [
+                    {
+                        src: imgProjeto4,
+                        filter: "Mostra as participantes. Algumas já tinham conhecimento na área, mas mesmo assim, o curso serviu para aprimorar ainda mais seus conhecimentos.",
+                        title: "Participantes"
+                    },
+                    {
+                        src: imgProjeto5,
+                        filter: "Desenvolvimento de apetrechos de pesca.",
+                        title: "Produção"
+                    },
+                    {
+                        src: imgProjeto6,
+                        filter: "Obtenção de certificados no evento IFRN in LOCO (dezembro de 2019).",
+                        title: "Resultado"
+                    }
+                ]
+            },
+            {
+                idName: "4",
+                type: "Images",
+                title: "OFICINA DE COOPERATIVISMO FEITA COM ARTESÃS (ECONOMIA SOLIDÁRIA)",
+                subtitle: "\tA Economia Solidária, fez com que o grupo criasse identidade no território da RDS Ponta do Tubarão, por meio de atividades de assessoramento e incubação. Todavia, o objetivo foi a consolidação e a reorganização de seu grupo, já que elas já eram um grupo com uma perícia no artesanato. Sendo assim, isso foi feito de forma que gerou-se um bem estar nas artesãs e uma renda. Contudo, também fez com que elas gerassem um desenvolvimento econômico, que foi construído de uma forma igualitária e econômica.",
+                images: [
+                    {
+                        src: imgProjeto7,
+                        filter: "Reunião na qual as artesãs aprenderam os fundamentos da Economia Solidária, onde também aprendeu-se sobre a autogestão.",
+                        title: "Reunião de sensibilização"
+                    },
+                    {
+                        src: imgProjeto8,
+                        filter: "Produção de chapéus (nomeado como: ‘’fábrica de chapéus’’).",
+                        title: "Produção"
+                    },
+                    {
+                        src: imgProjeto9,
+                        filter: "Realização da “fábrica de chapéus”, onde dividiu-se os grupos, e as artesãs formaram ficticiamente alguns empreendimentos.",
+                        title: "Resultado"
+                    }
+                ]
+            },
+            {
+                idName: "5",
+                type: "Images",
+                title: "ESTABELECIMENTO DE CANAIS DE DIÁLOGO COM PERIODICIDADE CONSTANTE: ENVOLVIMENTO INTERINSTITUCIONAL NAS ESFERAS MUNICIPAL, ESTADUAL E FEDERAL",
+                subtitle: "\tPor conta desta reunião, foi possível entender o estado atual de rede, como ela opera e trabalha. E a partir disso, participar mais intensamente na colaboração das atividades e principalmente proposição e construção de iniciativas para a comunidade da RDS. A participação nesta Audiência Pública, juntamente com os pescadores locais da RDS Ponta de Tubarão, de Macau e Guamaré, permitiu uma maior integração com a comunidade pesqueira da área atendida pelo IFRN - Campus Macau.\n\n\tAlém disso, o debate com presença de comunidades pesqueiras de todo o Estado, foi realizado em parceria com a Rede Mangue Mar e apontou desde como os problemas do meio ambiente que prejudicam o trabalho dos pescadores, a desvalorização da pesca artesanal e mariscagem, de como a falta de dados oficiais camuflam a importância econômica e de subsistência da pesca artesanal, e questões relativas a tradicionalidade e necessidade de resgate histórico e conservação de algumas comunidades pesqueiras.",
+                images: [
+                    {
+                        src: imgProjeto10,
+                        filter: "Reunião com representantes de várias instituições atuantes na RDS Ponta de Tubarão.",
+                        title: "Reunião com representantes"
+                    },
+                    {
+                        src: imgProjeto11,
+                        filter: "\"A pesca artesanal no RN\” realizada na Assembleia Legislativa.",
+                        title: "Audiência Pública"
+                    },
+                    {
+                        src: imgProjeto12,
+                        filter: "Audiência Pública “A pesca artesanal no RN” realizada na Assembleia Legislativa.",
+                        title: "Ouvintes"
                     }
                 ]
             },
@@ -135,7 +198,7 @@ const ptBrLang: LangFileProps = {
                 route: "#lendas"
             }
         ],
-        content: [
+        content: [/*
             {
                 idName: "rdspt",
                 type: "Text",
@@ -194,7 +257,7 @@ const ptBrLang: LangFileProps = {
                         title: "Exemplo"
                     }
                 ]
-            },
+            },*/
         ]
     },
     economyPage: {
@@ -222,7 +285,7 @@ const ptBrLang: LangFileProps = {
                 route: "#importancia"
             }
         ],
-        content: [
+        content: [/*
             {
                 idName: "rdspt",
                 type: "Text",
@@ -297,7 +360,7 @@ const ptBrLang: LangFileProps = {
                 type: "Text",
                 title: "Importância da RDSPT",
                 subtitle: "\tÉ notória a importância da Reserva Ponta do Tubarão de desenvolvimento sustentável, que busca manter, principalmente, a biodiversidade do local, além de conseguir assegurar as condições e os meios necessários para a melhoria da qualidade de vida da população que ali residem, considerando que a principal fonte de renda vem da pesca e os lugares de extração são os mangues, o estuário e o próprio mar. Logo, a principal importância cultural para o estado é a preservação do meio ambiente e o modo de vida simples que mantém a atividade pesqueira local como uma cultura levada a sério até os dias atuais. O hábito e o entendimento local da comunidade mudaram, interferindo diretamente em sua cultura e economia."
-            }
+            }*/
         ]
     },
     environmentPage: {
@@ -317,7 +380,7 @@ const ptBrLang: LangFileProps = {
                 route: "#notes"
             }
         ],
-        content: [
+        content: [/*
             {
                 idName: "fauna",
                 type: "Text",
@@ -335,7 +398,7 @@ const ptBrLang: LangFileProps = {
                 type: "Text",
                 title: "Notas adicionais",
                 subtitle: "\tApesar de 37,4% da poluição ser de origem sanitária, pedimos carecidamente que cada turista contribua com a preservação, não só de Diogo Lopes, como também da reserva como um todo. Para isso, basta jogar o lixo em seu devido lugar e respeitar ao máximo a bela paisagem que este lugar tem a te oferecer."   
-            }
+            }*/
         ]
     },
     routesPage: {
@@ -367,7 +430,7 @@ const ptBrLang: LangFileProps = {
                 route: "#historia"
             }
         ],
-        content: [
+        content: [/*
             {
                 idName: "potencialidades",
                 type: "Text",
@@ -444,7 +507,7 @@ const ptBrLang: LangFileProps = {
                 type: "Text",
                 title: "História do turismo na RDSPT",
                 subtitle: "\tA Reserva de Desenvolvimento Sustentável Ponta do Tubarão (RDSPT), no Rio Grande Norte, está mais fortalecida para o Turismo. Isso é resultado do projeto “Turismo de Base Comunitária na Ponta do Tubarão”, realizado pela Comissão de Justiça e Paz, proposta apoiada pelo 7° edital Costa Atlântica, da Fundação SOS Mata Atlântica. Durante cerca de um ano, o projeto desenvolveu ações para ampliar a capacidade do Grupo de Trabalho de Turismo do Conselho da RDS, articulando o setor hoteleiro, restaurantes e agências de turismo locais, além de ter realizado eventos com artesões da região e ampliado a divulgação da reserva nos roteiros turísticos do Rio Grande do Norte.\n\n\tNo 1° trimestre de 2016, concluiu-se a instalação das placas de sinalização da reserva e, no último mês do mesmo ano, a RDS ganhou um festival com gastronomia, esportes e outras atividades, além de um videoclipe promocional. \n\n\tSegundo o Sistema Nacional de Unidades de Conservação (SNUC), a RDS tem como objetivos proteger o modo de vida das populações tradicionais e assegurar atividades baseadas em um sistema sustentável de exploração de recursos naturais, estas desenvolvidas ao longo de gerações e adaptadas às condições ecológicas locais, desempenhando papel fundamental na proteção da natureza e na manutenção da diversidade biológica.\n\n\tA fauna e a flora da reserva são muito diversificadas, pois estão inseridas em um mosaico de paisagens naturais, tais como manguezal, tabuleiros costeiros, fragmentos de Mata Atlântica, além de praias, rios e lagoas. É possível conhecer todas essas riquezas naturais através de inúmeras trilhas terrestres e aquáticas, com auxílio de guias turísticos nativos.",
-            },
+            },*/
         ]
     },
     notFound: {

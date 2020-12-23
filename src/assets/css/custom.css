@@ -375,7 +375,15 @@ background: var(--USAFA-blue);
     height: 70vh !important;
 }
 
+.img-fluid {
+    min-height: 22rem !important;
+}
+
 @media (max-width: 992px) and (orientation: portrait) {
+    .img-fluid {
+        min-height: 15rem !important;
+    }
+
     .section-half {
         height: 40rem !important;
     }
