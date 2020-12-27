@@ -73,6 +73,7 @@ const Footer: React.FC<FooterProps> = ({ needResume }) => {
                     <Link to="#" className="linkedin"><i className="bx bxl-linkedin"></i></Link>
                 </div>
             </div>
+                
         </footer>
     );
 }

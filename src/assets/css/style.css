@@ -2070,9 +2070,7 @@ section {
   font-size: 14px;
   background-image: linear-gradient(white 0%,  var(--Almond) 10%, var(--Almond2) 30%, var(--Pale-Silver) 45%,  var(--Blue-Munsell) 75%, var(--USAFA-blue) 100%);
 }
-.pointPage #footer{
-  background-image: linear-gradient(170deg, var(--Almond)0%, var(--Almond2) 25%, var(--Pale-Silver)30%, var(--Blue-Munsell)50%, var(--USAFA-blue)100%);
-}
+
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
@@ -2208,7 +2206,7 @@ section {
   font-size: 13px;
 }
 
-#footer .social-links a {
+ #footer .social-links a {
   font-size: 18px;
   display: inline-block;
   background: var(--Green-blue-crayola); /*Icones color */
@@ -2222,17 +2220,9 @@ section {
   height: 36px;
   transition: 0.3s;
 }
-.pointPage #footer .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: var(--Green-blue-crayola); /*Icones color pagina mapa */
-  margin-top: -20px;
-  width: 31px;
-  height: 31px;
- 
-}
 
-#footer .social-links a:hover {
+
+ #footer .social-links a:hover {
   background: transparent;
   color: var(--white-color);
   text-decoration: none;
