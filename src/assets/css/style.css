@@ -9,7 +9,6 @@
 # General
 --------------------------------------------------------------*/
 :root{
-  
   --USAFA-blue: #015486;
   --Green-blue-crayola: #3884b8;
   --Blue-Munsell: #0291a2;
@@ -2204,6 +2203,9 @@ section {
 #footer .credits {
   padding-top: 5px;
   font-size: 13px;
+  color: white;
+  white-space: pre-wrap;
+  padding: 0 !important;
 }
 
  #footer .social-links a {

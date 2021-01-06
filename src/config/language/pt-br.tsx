@@ -150,26 +150,9 @@ const ptBrLang: LangFileProps = {
             },
             {
                 idName: "5",
-                type: "Images",
+                type: "Text",
                 title: "ESTABELECIMENTO DE CANAIS DE DIÁLOGO COM PERIODICIDADE CONSTANTE: ENVOLVIMENTO INTERINSTITUCIONAL NAS ESFERAS MUNICIPAL, ESTADUAL E FEDERAL",
                 subtitle: "\tPor conta desta reunião, foi possível entender o estado atual de rede, como ela opera e trabalha. E a partir disso, participar mais intensamente na colaboração das atividades e principalmente proposição e construção de iniciativas para a comunidade da RDS. A participação nesta Audiência Pública, juntamente com os pescadores locais da RDS Ponta de Tubarão, de Macau e Guamaré, permitiu uma maior integração com a comunidade pesqueira da área atendida pelo IFRN - Campus Macau.\n\n\tAlém disso, o debate com presença de comunidades pesqueiras de todo o Estado, foi realizado em parceria com a Rede Mangue Mar e apontou desde como os problemas do meio ambiente que prejudicam o trabalho dos pescadores, a desvalorização da pesca artesanal e mariscagem, de como a falta de dados oficiais camuflam a importância econômica e de subsistência da pesca artesanal, e questões relativas a tradicionalidade e necessidade de resgate histórico e conservação de algumas comunidades pesqueiras.",
-                images: [
-                    {
-                        src: imgProjeto10,
-                        filter: "Reunião com representantes de várias instituições atuantes na RDS Ponta de Tubarão.",
-                        title: "Reunião com representantes"
-                    },
-                    {
-                        src: imgProjeto11,
-                        filter: "\"A pesca artesanal no RN\” realizada na Assembleia Legislativa.",
-                        title: "Audiência Pública"
-                    },
-                    {
-                        src: imgProjeto12,
-                        filter: "Audiência Pública “A pesca artesanal no RN” realizada na Assembleia Legislativa.",
-                        title: "Ouvintes"
-                    }
-                ]
             },
         ]
     },

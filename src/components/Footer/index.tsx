@@ -59,10 +59,10 @@ const Footer: React.FC<FooterProps> = ({ needResume }) => {
             <div className="container d-md-flex py-4">
                 <div className="mr-md-auto text-center text-md-left">
                     <div className="copyright">
-                    &copy; Copyright <strong><span>Presento</span></strong>. All Rights Reserved
+                    &copy; Copyright <strong><span>Presento</span></strong>. All Rights Reserved Designed by {` `}
                     </div>
                     <div className="credits">
-                    Designed by <Link to="https://bootstrapmade.com/">BootstrapMade</Link>
+                    <Link to="https://bootstrapmade.com/">BootstrapMade</Link>
                     </div>
                 </div>
                 <div className="social-links text-center text-md-right pt-3 pt-md-0">
