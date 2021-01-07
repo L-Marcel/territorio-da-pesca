@@ -1,7 +1,5 @@
 import LangFileProps from './interface';
 
-import imgExemplo from '../../assets/img/content/artesanato_1.jpg';
-
 import imgProjeto1 from '../../assets/img/content/projeto_1.jpg';
 import imgProjeto2 from '../../assets/img/content/projeto_2.jpg';
 import imgProjeto3 from '../../assets/img/content/projeto_3.jpg';
@@ -14,9 +12,10 @@ import imgProjeto7 from '../../assets/img/content/projeto_7.jpg';
 import imgProjeto8 from '../../assets/img/content/projeto_8.jpg';
 import imgProjeto9 from '../../assets/img/content/projeto_9.jpg';
 
+/*
 import imgProjeto10 from '../../assets/img/content/projeto_10.jpg';
 import imgProjeto11 from '../../assets/img/content/projeto_11.jpg';
-import imgProjeto12 from '../../assets/img/content/projeto_12.jpg';
+import imgProjeto12 from '../../assets/img/content/projeto_12.jpg';*/
 
 const ptBrLang: LangFileProps = {
     header: [
@@ -68,8 +67,20 @@ const ptBrLang: LangFileProps = {
                 route: "#1"
             },
             {
-                text: "Cartografia Social",
+                text: "Cartografia social",
                 route: "#2"
+            },
+            {
+                text: "Curso",
+                route: "#3"
+            },
+            {
+                text: "Oficina: economia solidária",
+                route: "#4"
+            },
+            {
+                text: "Canais de dialogo",
+                route: "#5"
             },
         ],
         content: [

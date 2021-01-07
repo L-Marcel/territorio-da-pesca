@@ -7,7 +7,6 @@ import getLanguageFile, { langOptions } from '../../util/getLanguageFile';
 
 import ptBrLang from '../../config/language/pt-br';
 
-import logoImg from '../../assets/img/logo.png';
 import logoWhiteImg from '../../assets/img/logo-white.png';
 
 export interface LangProps {
@@ -56,6 +55,7 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
             <div className="container d-flex align-items-center justify-space-between">
                 <h1 className="logo mr-auto">
                     <img 
+                        alt="logo"
                         src={logoWhiteImg}
                     ></img>
                 </h1>

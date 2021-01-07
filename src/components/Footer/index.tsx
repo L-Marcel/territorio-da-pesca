@@ -62,7 +62,7 @@ const Footer: React.FC<FooterProps> = ({ needResume }) => {
                     &copy; Copyright <strong><span>Presento</span></strong>. All Rights Reserved Designed by {` `}
                     </div>
                     <div className="credits">
-                    <Link to="https://bootstrapmade.com/">BootstrapMade</Link>
+                    <a target="_blank" rel="noopener noreferrer" href="https://bootstrapmade.com/">BootstrapMade</a>
                     </div>
                 </div>
                 <div className="social-links text-center text-md-right pt-3 pt-md-0">
