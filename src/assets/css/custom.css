@@ -82,12 +82,11 @@ background: var(--USAFA-blue);
     display: flex;
     flex-direction: row;
     margin-top: 4rem;
-  
 }
 
 .leaflet-map {
     width: 100%;
-    height: 90%;
+    height: 92vh;
     position: fixed;
 }
 
@@ -218,6 +217,38 @@ background: var(--USAFA-blue);
     outline-style: none;
 }
 
+.pointPage .py-4 {
+    padding: 5px 10px !important;
+}
+
+.pointPage #footer{
+    display: flex;
+    left: 1rem;
+    background: var(--Grullo) !important;
+    bottom: 1rem!important;
+    position: fixed !important;
+    color: transparent !important;  
+    border-radius: 9px;
+}
+
+.pointPage #footer div div {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: 0px !important;
+}
+
+.pointPage #footer .social-links {
+    display: none !important;
+}
+
+.pointPage  #footer .copyright{
+    color: var(--white-color);
+    white-space: pre-wrap;
+    padding: 0 !important;
+    opacity: 1;
+}
+
 @media (max-width: 992px) and (orientation: portrait) {
     .mobile-nav-toggle {
         top: 0.8rem;
@@ -243,15 +274,6 @@ background: var(--USAFA-blue);
            
     .pointPage #header .logo img {
         max-height: 5vh;
-    }
-  
-    .pointPage .py-4 {
-        padding: 0 !important;
-        display: flex;
-        flex-direction: column;
-        height: 17.2vh;
-        justify-content: center;
-        align-items: center;
     }
 
     .pointPage .container {
@@ -291,6 +313,25 @@ background: var(--USAFA-blue);
     .filter-button:hover {
         justify-content: left;
         width: 2.5rem;
+    }
+
+    .pointPage  #footer .copyright{
+        font-size: 0.6rem;
+        color: var(--white-color);
+        white-space: pre-wrap;
+        padding: 0 !important;
+        opacity: 1;
+    }
+
+    .pointPage  #footer .credits{
+        font-size: 0.6rem;
+    }
+
+    .pointPage #footer {
+        left: 2rem;
+        right: 0rem;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
 }
 

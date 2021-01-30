@@ -15,7 +15,6 @@ import LangFileProps from '../../config/language/interface';
 import getLeafletIcon from '../../config/icons';
 
 import points from '../../config/json/pontos.json';
-import { url } from 'inspector';
 
 interface TypeProps {
     name: string;

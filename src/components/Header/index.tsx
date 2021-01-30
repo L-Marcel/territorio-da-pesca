@@ -7,7 +7,6 @@ import getLanguageFile, { langOptions } from '../../util/getLanguageFile';
 
 import ptBrLang from '../../config/language/pt-br';
 
-import logoImg from '../../assets/img/logo.png';
 import logoWhiteImg from '../../assets/img/logo-white.png';
 
 export interface LangProps {

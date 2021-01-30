@@ -1,7 +1,5 @@
 import LangFileProps from './interface';
 
-import imgExemplo from '../../assets/img/content/artesanato_1.jpg';
-
 import imgProjeto1 from '../../assets/img/content/projeto_1.jpg';
 import imgProjeto2 from '../../assets/img/content/projeto_2.jpg';
 import imgProjeto3 from '../../assets/img/content/projeto_3.jpg';
@@ -14,9 +12,10 @@ import imgProjeto7 from '../../assets/img/content/projeto_7.jpg';
 import imgProjeto8 from '../../assets/img/content/projeto_8.jpg';
 import imgProjeto9 from '../../assets/img/content/projeto_9.jpg';
 
+/*
 import imgProjeto10 from '../../assets/img/content/projeto_10.jpg';
 import imgProjeto11 from '../../assets/img/content/projeto_11.jpg';
-import imgProjeto12 from '../../assets/img/content/projeto_12.jpg';
+import imgProjeto12 from '../../assets/img/content/projeto_12.jpg';*/
 
 const ptBrLang: LangFileProps = {
     header: [
@@ -68,8 +67,20 @@ const ptBrLang: LangFileProps = {
                 route: "#1"
             },
             {
-                text: "Cartografia Social",
+                text: "Cartografia social",
                 route: "#2"
+            },
+            {
+                text: "Curso",
+                route: "#3"
+            },
+            {
+                text: "Oficina: economia solidária",
+                route: "#4"
+            },
+            {
+                text: "Canais de dialogo",
+                route: "#5"
             },
         ],
         content: [
@@ -150,26 +161,9 @@ const ptBrLang: LangFileProps = {
             },
             {
                 idName: "5",
-                type: "Images",
+                type: "Text",
                 title: "ESTABELECIMENTO DE CANAIS DE DIÁLOGO COM PERIODICIDADE CONSTANTE: ENVOLVIMENTO INTERINSTITUCIONAL NAS ESFERAS MUNICIPAL, ESTADUAL E FEDERAL",
                 subtitle: "\tPor conta desta reunião, foi possível entender o estado atual de rede, como ela opera e trabalha. E a partir disso, participar mais intensamente na colaboração das atividades e principalmente proposição e construção de iniciativas para a comunidade da RDS. A participação nesta Audiência Pública, juntamente com os pescadores locais da RDS Ponta de Tubarão, de Macau e Guamaré, permitiu uma maior integração com a comunidade pesqueira da área atendida pelo IFRN - Campus Macau.\n\n\tAlém disso, o debate com presença de comunidades pesqueiras de todo o Estado, foi realizado em parceria com a Rede Mangue Mar e apontou desde como os problemas do meio ambiente que prejudicam o trabalho dos pescadores, a desvalorização da pesca artesanal e mariscagem, de como a falta de dados oficiais camuflam a importância econômica e de subsistência da pesca artesanal, e questões relativas a tradicionalidade e necessidade de resgate histórico e conservação de algumas comunidades pesqueiras.",
-                images: [
-                    {
-                        src: imgProjeto10,
-                        filter: "Reunião com representantes de várias instituições atuantes na RDS Ponta de Tubarão.",
-                        title: "Reunião com representantes"
-                    },
-                    {
-                        src: imgProjeto11,
-                        filter: "\"A pesca artesanal no RN\” realizada na Assembleia Legislativa.",
-                        title: "Audiência Pública"
-                    },
-                    {
-                        src: imgProjeto12,
-                        filter: "Audiência Pública “A pesca artesanal no RN” realizada na Assembleia Legislativa.",
-                        title: "Ouvintes"
-                    }
-                ]
             },
         ]
     },

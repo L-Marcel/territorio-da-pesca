@@ -32,7 +32,7 @@ const Sections: React.FC<SectionsProps> = ({ content, withMarginTop }) => {
                 );
             case("Images"):
                 return(
-                    <section key={index} className={bgColor}>
+                    <section id={item.idName} key={index} className={bgColor}>
                         <div className="container aos-init aos-animate" data-aos="fade-up">
                             <div className="container aos-init aos-animate" data-aos="fade-up">
                                 <div className="section-title">
