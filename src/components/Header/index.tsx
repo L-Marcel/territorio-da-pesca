@@ -55,9 +55,9 @@ const Header: React.FC<HeaderProps> = ({ language, scrolled, onChangeLanguage })
         <header id="header" className={!startScrolled? `fixed-top`:`fixed-top header-scrolled`}>
             <div className="container d-flex align-items-center justify-space-between">
                 <h1 className="logo mr-auto">
-                    <img 
-                        src={logoWhiteImg}
-                    ></img>
+                    <a href="http://localhost:3000/pt-br/home">
+                        <img src={logoWhiteImg}></img>
+                    </a>
                 </h1>
                 <div className="nav-menu-container">
                     <nav className="nav-menu d-none d-lg-block">
