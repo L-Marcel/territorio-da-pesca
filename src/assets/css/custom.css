@@ -257,8 +257,12 @@ background: var(--USAFA-blue);
 
     .leaflet-map {
         width: 100%;
+<<<<<<< HEAD
         height: 82%;
        
+=======
+        height: 92vh;
+>>>>>>> 253baab0d7e3231a48bdb9bc19623b2591845065
     }
     
     .leaflet-map-container {
@@ -271,7 +275,11 @@ background: var(--USAFA-blue);
         transition: height .5s;
         padding-left: 0;
     }
+<<<<<<< HEAD
            
+=======
+
+>>>>>>> 253baab0d7e3231a48bdb9bc19623b2591845065
     .pointPage #header .logo img {
         max-height: 5vh;
     }
@@ -503,6 +511,7 @@ p {
         font-size: 0;
     }
 }
+<<<<<<< HEAD
 
 .pointPage #footer{
     margin-left: 10px;
@@ -590,3 +599,5 @@ p {
     }
     
 }
+=======
+>>>>>>> 253baab0d7e3231a48bdb9bc19623b2591845065
